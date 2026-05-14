@@ -1175,3 +1175,205 @@ footer {
     }
 
 }
+
+/* FINAL MOBILE OPTIMIZATION */
+
+@media (max-width: 1000px) {
+
+    /* GENERAL */
+
+    body {
+        overflow-x: hidden;
+    }
+
+    h1 {
+        font-size: 42px !important;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 34px !important;
+        line-height: 1.3;
+    }
+
+    p {
+        font-size: 17px !important;
+    }
+
+    /* TOP BAR */
+
+    .top-bar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 20px;
+        text-align: center;
+    }
+
+    .top-bar-left,
+    .top-bar-center,
+    .top-bar-right {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* NAV */
+
+    nav {
+        padding: 14px 22px;
+    }
+
+    .logo img {
+        height: 62px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+    }
+
+    .nav-links a {
+        margin-left: 0;
+        font-size: 15px;
+    }
+
+    /* HERO */
+
+    .hero {
+        flex-direction: column;
+        padding: 40px 22px;
+        margin: 35px 15px;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero-left {
+        align-items: center;
+    }
+
+    .hero-right img {
+        max-width: 100%;
+        width: 100%;
+        border-radius: 28px;
+    }
+
+    .subtitle {
+        max-width: 100%;
+        font-size: 18px !important;
+    }
+
+    .hero-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* PRODUCTS */
+
+    .products {
+        margin: 70px auto;
+        padding: 0 15px;
+    }
+
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* WHY BENA */
+
+    .why-bena {
+        margin: 80px auto;
+        padding: 0 20px;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .why-card {
+        padding: 40px 25px;
+    }
+
+    /* SHIPPING */
+
+    .shipping-section {
+        flex-direction: column;
+        margin: 80px auto;
+        padding: 0 20px;
+        gap: 40px;
+    }
+
+    .shipping-right img {
+        width: 100%;
+    }
+
+    /* NEWSLETTER */
+
+    .newsletter-section {
+        margin: 80px 15px;
+        padding: 45px 22px;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-form input,
+    .newsletter-form button {
+        width: 100%;
+    }
+
+    /* LIFESTYLE */
+
+    .lifestyle-banner {
+        height: 320px;
+        margin: 80px 15px;
+        border-radius: 28px;
+    }
+
+    .banner-overlay p {
+        font-size: 28px !important;
+        letter-spacing: 2px;
+        line-height: 1.4;
+    }
+
+    /* SOCIALS */
+
+    .social-links {
+        gap: 18px;
+    }
+
+    .social-links a {
+        width: 68px;
+        height: 68px;
+    }
+
+    .social-links i {
+        font-size: 28px;
+    }
+
+    /* NEWSLETTER PAGE */
+
+    .newsletter-page,
+    .shipping-page {
+        padding: 0 15px;
+    }
+
+    .newsletter-box,
+    .shipping-box {
+        flex-direction: column;
+        padding: 40px 22px;
+        gap: 40px;
+    }
+
+    .newsletter-right img,
+    .shipping-right-page img {
+        width: 100%;
+    }
+
+}
