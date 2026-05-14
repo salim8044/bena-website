@@ -137,7 +137,7 @@ nav {
 }
 
 h1 {
-    font-size: 78px;
+    font-size: clamp(42px, 8vw, 78px);
 
     line-height: 1.05;
 
@@ -353,7 +353,7 @@ textarea:focus {
 }
 
 .about-section h1 {
-    font-size: 64px;
+    font-size: clamp(38px, 7vw, 64px);
 
     margin-bottom: 40px;
 
