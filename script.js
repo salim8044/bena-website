@@ -88,3 +88,37 @@ window.addEventListener("scroll", () => {
     }
 
 });
+
+/* PRODUCT IMAGE SWITCH */
+
+function changeImage(element) {
+
+    const mainImage = document.getElementById("main-product-image");
+
+    mainImage.src = element.src;
+
+}
+
+/* QUANTITY SYSTEM */
+
+let quantity = 1;
+
+function increaseQuantity() {
+
+    quantity++;
+
+    document.getElementById("quantity").textContent = quantity;
+
+}
+
+function decreaseQuantity() {
+
+    if (quantity > 1) {
+
+        quantity--;
+
+        document.getElementById("quantity").textContent = quantity;
+
+    }
+
+}
