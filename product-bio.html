@@ -74,15 +74,36 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
     <section class="product-page fade-in">
 
-        <div class="product-page-left">
+<div class="product-page-left">
 
-            <video autoplay muted loop playsinline>
+    <!-- MAIN IMAGE -->
 
-                <source src="videos/bio-video.mp4" type="video/mp4">
+    <img id="main-product-image"
+        src="images/Produktbild 7.png"
+        alt="Bio Datteln">
 
-            </video>
+    <!-- THUMBNAILS -->
 
-        </div>
+    <div class="product-thumbnails">
+
+        <img
+            src="images/Produktbild 7.png"
+            alt="Thumbnail 1"
+            onclick="changeImage(this)">
+
+        <img
+            src="images/Produktbild 6.png"
+            alt="Thumbnail 2"
+            onclick="changeImage(this)">
+
+        <img
+            src="images/Produktbild 4.png"
+            alt="Thumbnail 3"
+            onclick="changeImage(this)">
+
+    </div>
+
+</div>
 
         <div class="product-page-right">
 
@@ -104,6 +125,54 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
                 CHF 12.90
 
             </div>
+
+            <!-- QUANTITY -->
+
+<div class="quantity-selector">
+
+    <button onclick="decreaseQuantity()">
+
+        −
+
+    </button>
+
+    <span id="quantity">
+
+        1
+
+    </span>
+
+    <button onclick="increaseQuantity()">
+
+        +
+
+    </button>
+
+</div>
+
+<!-- TRUST BADGES -->
+
+<div class="product-trust">
+
+    <div class="trust-badge">
+
+        🚚 Schnelle Lieferung Schweiz
+
+    </div>
+
+    <div class="trust-badge">
+
+        🌴 100% Naturprodukt
+
+    </div>
+
+    <div class="trust-badge">
+
+        🔒 Sichere Bestellung
+
+    </div>
+
+</div>
 
             <div class="product-buttons">
 
@@ -219,6 +288,87 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
     </section>
 
+    <!-- REVIEWS -->
+
+<section class="reviews-section fade-in">
+
+    <h2>Kundenbewertungen</h2>
+
+    <div class="reviews-grid">
+
+        <div class="review-card">
+
+            <div class="review-stars">
+
+                ★★★★★
+
+            </div>
+
+            <p>
+
+                Extrem weich und unglaublich lecker.
+                Die besten Medjool Datteln die ich bisher probiert habe.
+
+            </p>
+
+            <h4>
+
+                — Sarah M.
+
+            </h4>
+
+        </div>
+
+        <div class="review-card">
+
+            <div class="review-stars">
+
+                ★★★★★
+
+            </div>
+
+            <p>
+
+                Man merkt sofort den Qualitätsunterschied.
+                Super Verpackung und schnelle Lieferung.
+
+            </p>
+
+            <h4>
+
+                — Daniel K.
+
+            </h4>
+
+        </div>
+
+        <div class="review-card">
+
+            <div class="review-stars">
+
+                ★★★★★
+
+            </div>
+
+            <p>
+
+                Sehr hochwertig und perfekt als gesunder Snack.
+                Werde definitiv wieder bestellen.
+
+            </p>
+
+            <h4>
+
+                — Leila A.
+
+            </h4>
+
+        </div>
+
+    </div>
+
+</section>
+
     <!-- FOOTER -->
 
 <footer>
@@ -250,6 +400,24 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     </p>
 
 </footer>
+
+<!-- STICKY BUY MOBILE -->
+
+<div class="sticky-buy">
+
+    <div class="sticky-price">
+
+        CHF 14.90
+
+    </div>
+
+    <button class="sticky-button">
+
+        Jetzt kaufen
+
+    </button>
+
+</div>
 
     <script src="script.js"></script>
 
