@@ -64,7 +64,13 @@ addToCartButtons.forEach(button => {
 
         cartCount++;
 
-        cartCounter.textContent = cartCount;
+        if (cartCounter) {
+
+            cartCounter.textContent = cartCount;
+
+        }
+
+        openCart();
 
     });
 
@@ -120,5 +126,23 @@ function decreaseQuantity() {
         document.getElementById("quantity").textContent = quantity;
 
     }
+
+}
+
+/* CART SIDEBAR */
+
+function openCart() {
+
+    document.getElementById("cart-sidebar").classList.add("active");
+
+    document.getElementById("cart-overlay").classList.add("active");
+
+}
+
+function closeCart() {
+
+    document.getElementById("cart-sidebar").classList.remove("active");
+
+    document.getElementById("cart-overlay").classList.remove("active");
 
 }
