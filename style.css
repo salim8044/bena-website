@@ -1709,3 +1709,136 @@ footer {
     }
 
 }
+
+/* PREMIUM DETAIL CARDS */
+
+.detail-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.detail-icon {
+    font-size: 42px;
+    margin-bottom: 25px;
+}
+
+.detail-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #4d3b2c;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.4s;
+}
+
+.detail-card:hover::before {
+    transform: scaleX(1);
+}
+
+/* CART SIDEBAR */
+
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -420px;
+    width: 400px;
+    max-width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 99999;
+    box-shadow: -10px 0px 35px rgba(0,0,0,0.12);
+    transition: 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+.cart-header {
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-header h2 {
+    font-size: 32px;
+}
+
+.cart-header button {
+    border: none;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.cart-content {
+    flex: 1;
+    padding: 30px;
+}
+
+.cart-item {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.cart-item img {
+    width: 90px;
+    border-radius: 18px;
+}
+
+.cart-item h4 {
+    margin-bottom: 10px;
+    color: #3d3126;
+}
+
+.cart-item p {
+    color: #6b5a4d;
+}
+
+.cart-footer {
+    padding: 30px;
+    border-top: 1px solid #eee;
+}
+
+.checkout-button {
+    width: 100%;
+    background-color: #4d3b2c;
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.checkout-button:hover {
+    background-color: #8b6745;
+}
+
+/* OVERLAY */
+
+.cart-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 99998;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s;
+}
+
+.cart-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
