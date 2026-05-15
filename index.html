@@ -62,55 +62,55 @@
 
     <!-- NAVIGATION -->
 
-  <nav>
+    <nav>
 
-    <!-- LEFT -->
+        <!-- LEFT -->
 
-    <div class="nav-left">
+        <div class="nav-left">
 
-        <a href="index.html" class="logo">
+            <a href="index.html" class="logo">
 
-            <img src="images/Foto2.jpeg" alt="Bena Logo">
+                <img src="images/Foto2.jpeg" alt="Bena Logo">
 
-        </a>
+            </a>
 
-    </div>
+        </div>
 
-    <!-- CENTER -->
+        <!-- CENTER -->
 
-    <div class="nav-center">
+        <div class="nav-center">
 
-        <a href="index.html">Start</a>
+            <a href="index.html">Start</a>
 
-        <a href="#products">Produkte</a>
+            <a href="#products">Produkte</a>
 
-        <a href="about.html">Über Uns</a>
+            <a href="about.html">Über Uns</a>
 
-        <a href="shipping.html">Versand</a>
+            <a href="shipping.html">Versand</a>
 
-        <a href="newsletter.html">Newsletter</a>
+            <a href="newsletter.html">Newsletter</a>
 
-    </div>
+        </div>
 
-    <!-- RIGHT -->
+        <!-- RIGHT -->
 
-    <div class="nav-right">
+        <div class="nav-right">
 
-        <a href="https://instagram.com/bena.swiss" target="_blank">
+            <a href="https://instagram.com/bena.swiss" target="_blank">
 
-            <i class="fab fa-instagram"></i>
+                <i class="fab fa-instagram"></i>
 
-        </a>
+            </a>
 
-        <a href="#" class="cart-icon">
+            <a href="#" class="cart-icon" onclick="openCart()">
 
-            🛒 <span id="cart-count">0</span>
+                🛒 <span id="cart-count">0</span>
 
-        </a>
+            </a>
 
-    </div>
+        </div>
 
-</nav>
+    </nav>
 
     <!-- HERO -->
 
@@ -472,6 +472,56 @@
         </p>
 
     </footer>
+
+    <!-- CART SIDEBAR -->
+
+    <div class="cart-sidebar" id="cart-sidebar">
+
+        <div class="cart-header">
+
+            <h2>Warenkorb</h2>
+
+            <button onclick="closeCart()">
+
+                ✕
+
+            </button>
+
+        </div>
+
+        <div class="cart-content">
+
+            <div class="cart-item">
+
+                <img src="images/Produktbild 6.png" alt="Produkt">
+
+                <div>
+
+                    <h4>Premium Medjool</h4>
+
+                    <p>CHF 14.90</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="cart-footer">
+
+            <button class="checkout-button">
+
+                Zur Kasse
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- CART OVERLAY -->
+
+    <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
 
     <script src="script.js"></script>
 
