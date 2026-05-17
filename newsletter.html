@@ -18,57 +18,82 @@
 
 <body>
 
+        <!-- MOBILE MENU -->
+
+<div class="mobile-menu" id="mobile-menu">
+
+    <a href="index.html">Start</a>
+
+    <a href="index.html#products">Produkte</a>
+
+    <a href="about.html">Über Uns</a>
+
+    <a href="shipping.html">Versand</a>
+
+    <a href="newsletter.html">Newsletter</a>
+
+</div>
+
     <!-- NAVIGATION -->
 
-    <nav>
+<nav>
 
-        <!-- LEFT -->
+    <!-- LEFT -->
 
-        <div class="nav-left">
+    <div class="nav-left">
 
-            <a href="index.html" class="logo">
+        <a href="index.html" class="logo">
 
-                <img src="images/Foto2.jpeg" alt="Bena Logo">
+            <img src="images/Foto2.jpeg" alt="Bena Logo">
 
-            </a>
+        </a>
 
-        </div>
+    </div>
 
-        <!-- CENTER -->
+    <!-- CENTER -->
 
-        <div class="nav-center">
+    <div class="nav-center">
 
-            <a href="index.html">Start</a>
+        <a href="index.html">Start</a>
 
-            <a href="index.html#products">Produkte</a>
+        <a href="index.html#products">Produkte</a>
 
-            <a href="about.html">Über Uns</a>
+        <a href="about.html">Über Uns</a>
 
-            <a href="shipping.html">Versand</a>
+        <a href="shipping.html">Versand</a>
 
-            <a href="newsletter.html">Newsletter</a>
+        <a href="newsletter.html">Newsletter</a>
 
-        </div>
+    </div>
 
-        <!-- RIGHT -->
+    <!-- MOBILE BUTTON -->
 
-        <div class="nav-right">
+    <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
 
-            <a href="https://instagram.com/bena.swiss" target="_blank">
+        ☰
 
-                <i class="fab fa-instagram"></i>
+    </div>
 
-            </a>
+    <!-- RIGHT -->
 
-            <a href="#" class="cart-icon">
+    <div class="nav-right">
 
-                🛒 <span id="cart-count">0</span>
+        <a href="https://instagram.com/bena.swiss" target="_blank">
 
-            </a>
+            <i class="fab fa-instagram"></i>
 
-        </div>
+        </a>
 
-    </nav>
+        <a href="#" class="cart-icon" onclick="openCart()">
+
+            🛒 <span id="cart-count">0</span>
+
+        </a>
+
+    </div>
+
+</nav>
+
 
     <!-- NEWSLETTER -->
 
