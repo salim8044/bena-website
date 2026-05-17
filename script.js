@@ -52,7 +52,7 @@ faqQuestions.forEach(question => {
 
 /* CART SYSTEM */
 
-let cartCount = 0;
+let cart = [];
 
 const cartCounter = document.getElementById('cart-count');
 
@@ -62,19 +62,65 @@ addToCartButtons.forEach(button => {
 
     button.addEventListener('click', () => {
 
-        cartCount++;
+        const productName = button.dataset.name;
 
-        if (cartCounter) {
+        const productPrice = button.dataset.price;
 
-            cartCounter.textContent = cartCount;
+        const productImage = document.getElementById("main-product-image").src;
 
-        }
+        cart.push({
+
+            name: productName,
+            price: productPrice,
+            image: productImage
+
+        });
+
+        updateCart();
 
         openCart();
 
     });
 
 });
+
+/* UPDATE CART */
+
+function updateCart() {
+
+    const cartContent = document.querySelector(".cart-content");
+
+    cartContent.innerHTML = "";
+
+    cart.forEach(product => {
+
+        cartContent.innerHTML += `
+
+            <div class="cart-item">
+
+                <img src="${product.image}" alt="${product.name}">
+
+                <div>
+
+                    <h4>${product.name}</h4>
+
+                    <p>CHF ${product.price}</p>
+
+                </div>
+
+            </div>
+
+        `;
+
+    });
+
+    if (cartCounter) {
+
+        cartCounter.textContent = cart.length;
+
+    }
+
+}
 
 
 /* NAVBAR SCROLL EFFECT */
@@ -144,5 +190,13 @@ function closeCart() {
     document.getElementById("cart-sidebar").classList.remove("active");
 
     document.getElementById("cart-overlay").classList.remove("active");
+
+}
+
+/* MOBILE MENU */
+
+function toggleMobileMenu() {
+
+    document.getElementById("mobile-menu").classList.toggle("active");
 
 }
