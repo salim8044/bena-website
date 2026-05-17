@@ -18,6 +18,22 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <body>
 
+        <!-- MOBILE MENU -->
+
+<div class="mobile-menu" id="mobile-menu">
+
+    <a href="index.html">Start</a>
+
+    <a href="index.html#products">Produkte</a>
+
+    <a href="about.html">Über Uns</a>
+
+    <a href="shipping.html">Versand</a>
+
+    <a href="newsletter.html">Newsletter</a>
+
+</div>
+
     <!-- NAVIGATION -->
 
 <nav>
@@ -50,6 +66,14 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
     </div>
 
+    <!-- MOBILE BUTTON -->
+
+    <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+
+        ☰
+
+    </div>
+
     <!-- RIGHT -->
 
     <div class="nav-right">
@@ -60,7 +84,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
         </a>
 
-        <a href="#" class="cart-icon">
+        <a href="#" class="cart-icon" onclick="openCart()">
 
             🛒 <span id="cart-count">0</span>
 
