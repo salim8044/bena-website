@@ -2411,3 +2411,176 @@ footer {
     }
 
 }
+
+/* SHIPPING MOBILE FIX */
+
+@media (max-width: 1000px) {
+
+    .shipping-section {
+
+        flex-direction: column;
+
+        padding: 40px 20px;
+
+        gap: 40px;
+
+        overflow: hidden;
+
+    }
+
+    .shipping-left,
+    .shipping-right {
+
+        width: 100%;
+
+    }
+
+    .shipping-left h2 {
+
+        font-size: 42px;
+
+        line-height: 1.1;
+
+        word-break: break-word;
+
+    }
+
+    .shipping-left p {
+
+        font-size: 18px;
+
+        line-height: 1.8;
+
+    }
+
+    .shipping-right img {
+
+        width: 100%;
+
+        border-radius: 24px;
+
+    }
+
+}
+
+/* FORCE SHIPPING MOBILE FIX */
+
+@media (max-width: 1000px) {
+
+    .shipping-section {
+
+        display: flex !important;
+
+        flex-direction: column !important;
+
+        padding: 40px 20px !important;
+
+        gap: 40px !important;
+
+        overflow: hidden !important;
+
+    }
+
+    .shipping-left,
+    .shipping-right {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+    }
+
+    .shipping-left h2 {
+
+        font-size: 38px !important;
+
+        line-height: 1.1 !important;
+
+        word-break: break-word !important;
+
+    }
+
+    .shipping-left p {
+
+        font-size: 18px !important;
+
+        line-height: 1.8 !important;
+
+    }
+
+    .shipping-right img {
+
+        width: 100% !important;
+
+        max-width: 100% !important;
+
+        border-radius: 24px !important;
+
+    }
+
+}
+
+/* SHIPPING PAGE MOBILE FIX */
+
+@media (max-width: 1000px) {
+
+    .shipping-page {
+
+        padding: 30px 18px;
+
+        overflow: hidden;
+
+    }
+
+    .shipping-box {
+
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 40px;
+
+        padding: 35px 22px;
+
+        border-radius: 28px;
+
+    }
+
+    .shipping-left-page,
+    .shipping-right-page {
+
+        width: 100%;
+
+        max-width: 100%;
+
+    }
+
+    .shipping-left-page h1 {
+
+        font-size: 54px;
+
+        line-height: 1.05;
+
+        word-break: break-word;
+
+        margin-bottom: 30px;
+
+    }
+
+    .shipping-left-page p {
+
+        font-size: 18px;
+
+        line-height: 1.8;
+
+    }
+
+    .shipping-right-page img {
+
+        width: 100%;
+
+        border-radius: 24px;
+
+    }
+
+}
