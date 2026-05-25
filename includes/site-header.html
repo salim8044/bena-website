@@ -1,0 +1,42 @@
+<nav id="main-nav" class="nav" aria-label="Hauptnavigation">
+    <div class="nav__inner">
+
+        <a href="index.html" class="nav__logo" aria-label="Bena Startseite">
+            <span>Bena</span><span class="nav__logo-dot">.</span>
+        </a>
+
+        <ul class="nav__links" id="nav-drawer" role="list">
+            <li class="nav__drawer-head">
+                <span class="nav__drawer-title">Menü</span>
+                <button type="button" class="nav__drawer-close" id="nav-drawer-close" aria-label="Menü schließen">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </li>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="index.html#products">Kollektion</a></li>
+            <li><a href="index.html#story">Aswan</a></li>
+            <li><a href="index.html#ai-finder">Bena AI</a></li>
+            <li><a href="about.html">Über uns</a></li>
+        </ul>
+
+        <div class="nav__right">
+            <a href="index.html#ai-finder" class="nav__search" aria-label="Bena Sommelier öffnen">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </a>
+            <a href="#" class="nav__cart cart-icon" aria-label="Warenkorb öffnen">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="nav__cart-count" id="cart-count">0</span>
+            </a>
+
+            <button type="button" class="nav__burger" id="mobile-menu-btn" aria-expanded="false"
+                aria-controls="nav-drawer" aria-label="Menü öffnen">
+                <span class="nav__burger-bar"></span>
+                <span class="nav__burger-bar"></span>
+                <span class="nav__burger-bar"></span>
+            </button>
+        </div>
+
+    </div>
+</nav>
+
+<div class="nav-overlay" id="nav-overlay" hidden></div>
