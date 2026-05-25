@@ -2,113 +2,327 @@
 <html lang="de">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1a120a">
+    <title>Newsletter — Briefe aus Aswan · Bena</title>
+    <meta name="description"
+        content="Briefe aus Aswan. Einmal im Monat. 5% Rabatt auf deine erste Bestellung, Geschichten aus den Palmenhainen, Rezepte und Vorab-Drops.">
 
-    <title>Newsletter | Bena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
+    <div class="announcement" role="region" aria-label="Ankündigung">
+        <div class="announcement__inner">
+            <span class="announcement__item">
+                <i class="fa-solid fa-truck-fast"></i>
+                Kostenloser Versand ab CHF 89
+            </span>
+            <span class="announcement__divider" aria-hidden="true">·</span>
+            <a class="announcement__item announcement__item--link" href="newsletter.html">
+                Jetzt 5% sichern mit dem Newsletter
+            </a>
+            <span class="announcement__divider" aria-hidden="true">·</span>
+            <span class="announcement__item">
+                <i class="fa-solid fa-leaf"></i>
+                Direkt aus Aswan, Ägypten
+            </span>
+        </div>
+    </div>
+
     <header id="site-header" class="site-header"></header>
 
-    <!-- NEWSLETTER -->
+    <main>
 
-    <section class="newsletter-page">
+        <!-- NEWSLETTER HERO -->
+        <section class="newsletter-hero">
+            <div class="newsletter-hero__card reveal">
+                <div class="newsletter-hero__bg" aria-hidden="true"></div>
 
-        <div class="newsletter-box">
+                <div class="newsletter-hero__copy">
+                    <span class="eyebrow eyebrow--light">
+                        <span class="eyebrow__dot" aria-hidden="true"></span>
+                        Briefe aus Aswan · Ausgabe 14
+                    </span>
 
-            <div class="newsletter-left">
+                    <h1 class="display display--sm">
+                        Eine Idee.<br>
+                        Einmal im <em>Monat</em>.<br>
+                        Direkt in deine Inbox.
+                    </h1>
 
-                <p class="section-tag">
+                    <p>
+                        Briefe aus Aswan ist unser monatlicher Brief — keine
+                        Werbeflut, kein Massen-Mailing. Nur eine sorgfältig
+                        kuratierte Geschichte, ein Rezept oder ein Vorab-Drop,
+                        bevor wir auf Social geht.
+                    </p>
 
-                    BENA NEWSLETTER
+                    <ul class="newsletter-hero__meta">
+                        <li>
+                            <strong>5 %</strong>
+                            <span>Auf deine erste Bestellung</span>
+                        </li>
+                        <li>
+                            <strong>1×</strong>
+                            <span>Mail pro Monat. Nie mehr.</span>
+                        </li>
+                        <li>
+                            <strong>0</strong>
+                            <span>Daten an Dritte</span>
+                        </li>
+                    </ul>
+                </div>
 
-                </p>
+                <!-- FORM CARD -->
+                <form class="newsletter-form-card" id="news-form" novalidate>
+                    <p class="newsletter-form-card__label">
+                        Jetzt eintragen
+                    </p>
 
-                <h1>
+                    <input type="text" id="news-name" placeholder="Vorname" autocomplete="given-name">
+                    <input type="email" id="news-email" placeholder="E-Mail-Adresse" autocomplete="email" required>
 
-                    Erhalte 5% auf Deine erste Bestellung
-
-                </h1>
-
-                <p class="newsletter-description">
-
-                    Melde Dich jetzt für unseren Newsletter an und erhalte exklusive Angebote,
-                    neue Produkte und spannende Einblicke hinter Bena.
-
-                </p>
-
-                <form class="newsletter-form">
-
-                    <input type="text" placeholder="Vorname">
-
-                    <input type="email" placeholder="E-Mail-Adresse">
-
-                    <button type="submit">
-
-                        Jetzt anmelden
-
+                    <button type="submit" class="btn">
+                        <span>Brief abonnieren</span>
+                        <i class="fa-solid fa-arrow-right"></i>
                     </button>
 
+                    <p class="newsletter__legal">
+                        Mit dem Abonnement stimmst du unserer
+                        <a href="#" style="color:inherit;text-decoration:underline">Datenschutzerklärung</a>
+                        zu. Abmeldung jederzeit mit einem Klick.
+                    </p>
+
+                    <p class="newsletter__success" hidden>
+                        <i class="fa-solid fa-check"></i>
+                        Welcome aboard. Schau gleich in deine Inbox — wir haben
+                        dir eine Bestätigung geschickt.
+                    </p>
                 </form>
-
             </div>
+        </section>
 
-            <div class="newsletter-right">
+        <!-- BENEFITS -->
+        <section class="benefits" aria-labelledby="benefits-title">
+            <header class="section-head reveal">
+                <span class="eyebrow">Was du bekommst</span>
+                <h2 id="benefits-title" class="display display--sm">
+                    Worüber wir <em>schreiben</em>.
+                </h2>
+            </header>
 
-                <img src="images/Produktbild 6.png" alt="Newsletter Bena">
+            <div class="benefits__grid">
+                <article class="benefit reveal" data-reveal-delay="0">
+                    <div class="benefit__icon"><i class="fa-solid fa-percent"></i></div>
+                    <h3>5 % Willkommensrabatt</h3>
+                    <p>
+                        Sofort nach Anmeldung erhältst du einen einmaligen
+                        Code für deine erste Bestellung.
+                    </p>
+                </article>
 
+                <article class="benefit reveal" data-reveal-delay="80">
+                    <div class="benefit__icon"><i class="fa-solid fa-book-open"></i></div>
+                    <h3>Geschichten aus Aswan</h3>
+                    <p>
+                        Wie unsere Erntehelfer leben, was zur Ernte gegessen
+                        wird, wie der Nil sich im Sommer verhält.
+                    </p>
+                </article>
+
+                <article class="benefit reveal" data-reveal-delay="160">
+                    <div class="benefit__icon"><i class="fa-solid fa-utensils"></i></div>
+                    <h3>Rezepte &amp; Pairings</h3>
+                    <p>
+                        Jede Ausgabe enthält ein einfaches, schönes Rezept,
+                        das wir selbst lieben — mit Datteln, versteht sich.
+                    </p>
+                </article>
+
+                <article class="benefit reveal" data-reveal-delay="240">
+                    <div class="benefit__icon"><i class="fa-solid fa-bell"></i></div>
+                    <h3>Vorab-Drops</h3>
+                    <p>
+                        Neue Editionen, limitierte Sorten und Pop-ups —
+                        Abonnent:innen bekommen den Link 48 h vorher.
+                    </p>
+                </article>
             </div>
+        </section>
 
-        </div>
+        <!-- PAST ISSUES (preview) -->
+        <section class="issues" aria-labelledby="issues-title">
+            <header class="section-head reveal">
+                <span class="eyebrow">Bisherige Ausgaben</span>
+                <h2 id="issues-title" class="display display--sm">
+                    Ein <em>Blick</em><br>
+                    in das Archiv.
+                </h2>
+            </header>
 
-    </section>
+            <div class="issues__grid">
+                <a href="#" class="issue reveal" data-reveal-delay="0">
+                    <div class="issue__cover">№ 13</div>
+                    <div class="issue__body">
+                        <div class="issue__date">Mai 2026 · 5 Min Lesezeit</div>
+                        <h3>Warum die beste Dattel<br>ihren Stein behält.</h3>
+                        <p>
+                            Ein Plädoyer für unverarbeitete Frucht — und warum
+                            wir bewusst auf entsteinte Massenware verzichten.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="#" class="issue reveal" data-reveal-delay="120">
+                    <div class="issue__cover">№ 12</div>
+                    <div class="issue__body">
+                        <div class="issue__date">April 2026 · 7 Min Lesezeit</div>
+                        <h3>Eine Nacht im<br>Palmenhain.</h3>
+                        <p>
+                            Reportage aus der Erntenacht 2025: Wie die Frauen
+                            in Aswan die beste Stunde nach Sonnenuntergang nutzen.
+                        </p>
+                    </div>
+                </a>
+
+                <a href="#" class="issue reveal" data-reveal-delay="240">
+                    <div class="issue__cover">№ 11</div>
+                    <div class="issue__body">
+                        <div class="issue__date">März 2026 · 4 Min Lesezeit</div>
+                        <h3>Cheeseboard,<br>Bena-style.</h3>
+                        <p>
+                            Drei Käsesorten, drei Dattelsorten, eine
+                            Honigwabe. Das einfachste Apéro-Set der Welt.
+                        </p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- FOUNDER QUOTE / TRUST -->
+        <section class="founder-quote">
+            <figure class="founder-quote__inner reveal">
+                <div class="founder-quote__mark" aria-hidden="true">"</div>
+                <blockquote>
+                    Wir schreiben so, wie wir reden würden. Wenn der Brief sich
+                    wie Werbung anfühlt, haben wir versagt.
+                </blockquote>
+                <figcaption>
+                    <span class="founder-quote__avatar" aria-hidden="true">S</span>
+                    <span>
+                        <strong>Salim Bena</strong>
+                        Co-Founder · schreibt den Newsletter persönlich
+                    </span>
+                </figcaption>
+            </figure>
+        </section>
+
+    </main>
 
     <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="index.html" class="footer__logo">Bena<span>.</span></a>
+                <p>
+                    Premium-Datteln aus Aswan.<br>
+                    Mit Liebe versendet in der Schweiz.
+                </p>
+                <div class="footer__socials">
+                    <a href="https://instagram.com/bena.swiss" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
 
-    <footer>
+            <div class="footer__col">
+                <h4>Kollektion</h4>
+                <ul>
+                    <li><a href="product-premium.html">Premium Medjool</a></li>
+                    <li><a href="product-bio.html">Bio Sukkari</a></li>
+                    <li><a href="product-premium.html">Editor's Box</a></li>
+                    <li><a href="index.html#products">Alle ansehen</a></li>
+                </ul>
+            </div>
 
-        <div class="social-links">
+            <div class="footer__col">
+                <h4>Marke</h4>
+                <ul>
+                    <li><a href="about.html">Unsere Geschichte</a></li>
+                    <li><a href="index.html#story">Aswan, Ägypten</a></li>
+                    <li><a href="index.html#ai-finder">Bena Intelligence</a></li>
+                    <li><a href="newsletter.html">Journal</a></li>
+                </ul>
+            </div>
 
-            <a href="https://instagram.com/bena.swiss" target="_blank">
-
-                <i class="fab fa-instagram"></i>
-
-            </a>
-
-            <a href="https://facebook.com" target="_blank">
-
-                <i class="fab fa-facebook"></i>
-
-            </a>
-
-            <a href="https://tiktok.com" target="_blank">
-
-                <i class="fab fa-tiktok"></i>
-
-            </a>
-
+            <div class="footer__col">
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="shipping.html">Versand &amp; Rückgabe</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                    <li><a href="mailto:hello@bena.swiss">hello@bena.swiss</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
         </div>
 
-        <p>
-
-            © 2026 Bena – Premium Datteln aus Ägypten
-
-        </p>
-
+        <div class="footer__base">
+            <p>© 2026 Bena AG — Aswan / Zürich. Alle Rechte vorbehalten.</p>
+            <p>
+                <a href="#">Impressum</a>
+                <span aria-hidden="true">·</span>
+                <a href="#">Datenschutz</a>
+                <span aria-hidden="true">·</span>
+                <a href="#">AGB</a>
+            </p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- CART SIDEBAR -->
+    <aside class="cart" id="cart-sidebar" aria-label="Warenkorb" aria-hidden="true">
+        <header class="cart__head">
+            <h2>Warenkorb</h2>
+            <button type="button" class="cart__close" onclick="closeCart()" aria-label="Warenkorb schließen">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </header>
+        <div class="cart__body">
+            <div class="cart__empty" id="cart-empty">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <p>Dein Warenkorb ist noch leer.</p>
+                <a href="index.html#products" class="btn btn--ghost" onclick="closeCart()">Kollektion entdecken</a>
+            </div>
+            <ul class="cart__items" id="cart-items"></ul>
+        </div>
+        <footer class="cart__foot" id="cart-foot" hidden>
+            <div class="cart__total">
+                <span>Zwischensumme</span>
+                <strong id="cart-total">CHF 0.00</strong>
+            </div>
+            <button class="btn btn--primary btn--full">Zur Kasse</button>
+            <p class="cart__hint">Versand &amp; Steuern werden im Checkout berechnet.</p>
+        </footer>
+    </aside>
+    <div class="cart-overlay" id="cart-overlay" onclick="closeCart()" hidden></div>
 
+    <script src="script.js" defer></script>
 </body>
 
 </html>
