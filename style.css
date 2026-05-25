@@ -2487,8 +2487,20 @@ body.nav-open {
     justify-content: center;
 }
 
-.page-hero h1 {
+.page-hero h1,
+.page-hero .display {
     margin-bottom: 24px;
+    color: var(--ink-1);
+}
+
+.page-hero .display em {
+    color: var(--accent-deep);
+}
+
+/* Above-the-fold: show immediately, no fade-in */
+.page-hero .reveal {
+    opacity: 1;
+    transform: none;
 }
 
 .page-hero__lede {
