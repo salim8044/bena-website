@@ -593,6 +593,199 @@
     }
 
     /* -------------------------------------------------------------------------
+       Product detail page — gallery
+       ------------------------------------------------------------------------- */
+    function initPDPGallery() {
+        const stage = document.getElementById("pdp-stage");
+        const main = document.getElementById("pdp-main");
+        const thumbs = document.querySelectorAll(".pdp__thumb");
+        if (!stage || !main || !thumbs.length) return;
+
+        thumbs.forEach((thumb) => {
+            thumb.addEventListener("click", () => {
+                const src = thumb.dataset.image;
+                const alt = thumb.dataset.alt || main.alt;
+                if (!src || main.src.endsWith(src)) return;
+
+                stage.classList.add("is-switching");
+                setTimeout(() => {
+                    main.src = src;
+                    main.alt = alt;
+                    requestAnimationFrame(() => stage.classList.remove("is-switching"));
+                }, 220);
+
+                thumbs.forEach((t) => {
+                    t.classList.toggle("is-active", t === thumb);
+                    t.setAttribute("aria-selected", t === thumb ? "true" : "false");
+                });
+            });
+        });
+    }
+
+    /* -------------------------------------------------------------------------
+       Product detail page — quantity + add-to-cart
+       ------------------------------------------------------------------------- */
+    function initPDPActions() {
+        const qtyEl = document.getElementById("pdp-qty");
+        const dec = document.querySelector(".pdp__qty-dec");
+        const inc = document.querySelector(".pdp__qty-inc");
+        const ctaPrice = document.querySelector(".pdp__cta-price");
+        const priceEl = document.querySelector(".pdp__price");
+        const stickyAmount = document.querySelector(".sticky-buy__amount");
+
+        const basePrice = priceEl ? parseFloat(priceEl.dataset.basePrice || "0") : 0;
+
+        function renderPrice() {
+            if (!qtyEl) return;
+            const qty = parseInt(qtyEl.textContent, 10) || 1;
+            const sum = (basePrice * qty).toFixed(2);
+            if (ctaPrice) ctaPrice.textContent = `CHF ${sum}`;
+            if (stickyAmount) stickyAmount.textContent = `CHF ${sum}`;
+            if (dec) dec.disabled = qty <= 1;
+        }
+
+        if (qtyEl && dec && inc) {
+            dec.addEventListener("click", () => {
+                const v = Math.max(1, (parseInt(qtyEl.textContent, 10) || 1) - 1);
+                qtyEl.textContent = v;
+                renderPrice();
+            });
+            inc.addEventListener("click", () => {
+                const v = Math.min(20, (parseInt(qtyEl.textContent, 10) || 1) + 1);
+                qtyEl.textContent = v;
+                renderPrice();
+            });
+            renderPrice();
+        }
+
+        document.querySelectorAll(".js-add-to-cart").forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const name = btn.dataset.name || "Bena Produkt";
+                const price = parseFloat(btn.dataset.price || "0");
+                const image = btn.dataset.image || "images/Produktbild 6.png";
+                const qty = parseInt(qtyEl?.textContent || "1", 10) || 1;
+
+                for (let i = 0; i < qty; i++) cart.push({ name, price, image });
+
+                syncCartCount();
+
+                const label = btn.querySelector("span > span") || btn.querySelector("span");
+                const originalHTML = btn.innerHTML;
+                btn.classList.add("is-added");
+                btn.innerHTML = '<i class="fa-solid fa-check"></i><span>Hinzugefügt</span>';
+
+                setTimeout(() => {
+                    btn.classList.remove("is-added");
+                    btn.innerHTML = originalHTML;
+                    openCart();
+                }, 700);
+            });
+        });
+    }
+
+    /* -------------------------------------------------------------------------
+       FAQ accordion
+       ------------------------------------------------------------------------- */
+    function initFAQ() {
+        const items = document.querySelectorAll(".faq__item");
+        if (!items.length) return;
+
+        items.forEach((item) => {
+            const btn = item.querySelector(".faq__question");
+            const answer = item.querySelector(".faq__answer");
+            const inner = item.querySelector(".faq__answer-inner");
+            if (!btn || !answer || !inner) return;
+
+            btn.addEventListener("click", () => {
+                const isOpen = item.classList.contains("is-open");
+
+                items.forEach((other) => {
+                    if (other === item) return;
+                    other.classList.remove("is-open");
+                    const otherBtn = other.querySelector(".faq__question");
+                    const otherAnswer = other.querySelector(".faq__answer");
+                    if (otherBtn) otherBtn.setAttribute("aria-expanded", "false");
+                    if (otherAnswer) otherAnswer.style.maxHeight = null;
+                });
+
+                if (isOpen) {
+                    item.classList.remove("is-open");
+                    btn.setAttribute("aria-expanded", "false");
+                    answer.style.maxHeight = null;
+                } else {
+                    item.classList.add("is-open");
+                    btn.setAttribute("aria-expanded", "true");
+                    answer.style.maxHeight = inner.scrollHeight + "px";
+                }
+            });
+        });
+    }
+
+    /* -------------------------------------------------------------------------
+       Tasting bars — animate when section enters viewport
+       ------------------------------------------------------------------------- */
+    function initTasting() {
+        const tasting = document.querySelector(".tasting");
+        if (!tasting) return;
+
+        if (!("IntersectionObserver" in window)) {
+            tasting.classList.add("is-visible");
+            return;
+        }
+        const io = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        io.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.25 }
+        );
+        io.observe(tasting);
+    }
+
+    /* -------------------------------------------------------------------------
+       Standalone newsletter form (newsletter.html)
+       ------------------------------------------------------------------------- */
+    function initStandaloneNewsletter() {
+        const form = document.getElementById("news-form");
+        if (!form) return;
+        const email = form.querySelector("#news-email");
+        const btn = form.querySelector("button[type='submit']");
+        const success = form.querySelector(".newsletter__success");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            if (!email || !email.value.trim() || !email.value.includes("@")) {
+                email?.focus();
+                email?.classList.add("has-error");
+                setTimeout(() => email?.classList.remove("has-error"), 1200);
+                return;
+            }
+
+            btn.disabled = true;
+            const original = btn.innerHTML;
+            btn.innerHTML = '<span>Wird gespeichert…</span>';
+
+            setTimeout(() => {
+                form.classList.add("is-success");
+                if (success) success.hidden = false;
+                btn.innerHTML = '<i class="fa-solid fa-check"></i><span>Angemeldet</span>';
+                email.value = "";
+                const nameField = form.querySelector("#news-name");
+                if (nameField) nameField.value = "";
+
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.innerHTML = original;
+                }, 2400);
+            }, 900);
+        });
+    }
+
+    /* -------------------------------------------------------------------------
        Bootstrap
        ------------------------------------------------------------------------- */
     document.addEventListener("DOMContentLoaded", () => {
@@ -602,6 +795,12 @@
         initContentAgent();
         initNewsletter();
         initHeroParallax();
+
+        initPDPGallery();
+        initPDPActions();
+        initFAQ();
+        initTasting();
+        initStandaloneNewsletter();
     });
 
 })();
