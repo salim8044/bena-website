@@ -2,137 +2,399 @@
 <html lang="de">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Über uns | Bena</title>
-
+    <meta name="theme-color" content="#f6f1ea">
+    <title>Über uns — Bena Premium Datteln aus Aswan</title>
     <meta name="description"
-        content="Erfahre mehr über die Geschichte hinter Bena und unsere Vision für nachhaltige Premium Datteln aus Ägypten.">
+        content="Die Geschichte hinter Bena. Eine Familie zwischen Aswan und der Schweiz, drei Generationen Dattelanbau und eine Marke, die Herkunft, Ethik und modernes Design verbindet.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement" role="region" aria-label="Ankündigung">
+        <div class="announcement__inner">
+            <span class="announcement__item">
+                <i class="fa-solid fa-truck-fast"></i>
+                Kostenloser Versand ab CHF 89
+            </span>
+            <span class="announcement__divider" aria-hidden="true">·</span>
+            <a class="announcement__item announcement__item--link" href="newsletter.html">
+                Jetzt 5% sichern mit dem Newsletter
+            </a>
+            <span class="announcement__divider" aria-hidden="true">·</span>
+            <span class="announcement__item">
+                <i class="fa-solid fa-leaf"></i>
+                Direkt aus Aswan, Ägypten
+            </span>
+        </div>
+    </div>
+
     <header id="site-header" class="site-header"></header>
 
-    <!-- ABOUT SECTION -->
+    <main>
 
-    <section class="about-section fade-in">
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="page-hero__bg" aria-hidden="true"></div>
 
-        <p class="hero-origin">
-            OUR STORY
-        </p>
+            <div class="page-hero__inner reveal">
+                <div class="breadcrumb">
+                    <a href="index.html">Bena</a>
+                    <span aria-hidden="true">/</span>
+                    <span>Über uns</span>
+                </div>
 
-        <h1>Unsere Geschichte</h1>
+                <span class="eyebrow">
+                    <span class="eyebrow__dot" aria-hidden="true"></span>
+                    Eine Familie · zwei Kontinente
+                </span>
 
-        <div class="about-text">
+                <h1 class="display display--sm">
+                    Wir bauen <em>Datteln</em>,<br>
+                    nicht <em>Marketing</em>.
+                </h1>
 
-            <p>
+                <p class="page-hero__lede">
+                    Bena entstand aus einer einfachen Idee: ehrliche Datteln aus
+                    der Heimat unserer Familie nach Europa zu bringen — ohne
+                    Zwischenstationen, ohne Posen.
+                </p>
+            </div>
+        </section>
 
-                Bena entstand aus einer persönlichen Verbindung zwischen der Schweiz und Ägypten.
+        <!-- MANIFESTO -->
+        <section class="manifesto">
+            <div class="manifesto__inner">
+                <p class="manifesto__lede reveal">
+                    Wir glauben, dass <em>gute Produkte</em>
+                    nicht anonym sein müssen. Sie können Herkunft,
+                    Bedeutung und Menschen tragen.
+                </p>
 
-                Ein Teil unserer Familie stammt aus Ägypten. Seit vielen Jahren bewirtschaften wir dort eigenes Land
-                mit einer klaren Vision:
-                hochwertige Datteln anzubauen und gleichzeitig nachhaltige Perspektiven für die Menschen vor Ort zu schaffen.
+                <div class="manifesto__body reveal" data-reveal-delay="120">
+                    <p>
+                        Bena begann mit einer Frage. Warum sehen die Datteln in
+                        der Schweiz, die wir lieben, nichts wie das aus, was wir
+                        aus Aswan kennen? Warum reisen sie monatelang, durch
+                        Zwischenhändler, durch fremde Hände — und kommen müde an?
+                    </p>
+                    <p>
+                        Ein Teil unserer Familie stammt aus Aswan, im Süden
+                        Ägyptens. Dort, wo die Sahara den Nil trifft. Seit
+                        <strong>drei Generationen</strong> bewirtschaften wir
+                        Land, auf dem die edelsten Dattelpalmen der Welt
+                        wachsen. Wir kennen jeden Baum. Wir kennen jede Sorte.
+                        Wir kennen die Menschen, die zur Ernte mitkommen.
+                    </p>
+                    <p>
+                        Mit Bena bringen wir diese Datteln direkt in die
+                        Schweiz. Kein Großhandel, keine Zwischenlager, keine
+                        Verarbeitung. Nur die Frucht, der Sand, die Sonne — und
+                        moderne, schöne Verpackung, die der Qualität gerecht wird.
+                    </p>
+                    <p>
+                        Wir wollen, dass jeder Bissen eine Geschichte erzählt.
+                        Nicht weil das gut klingt, sondern weil es wahr ist.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-            </p>
+        <!-- VALUES -->
+        <section class="values" aria-labelledby="values-title">
+            <header class="section-head reveal">
+                <span class="eyebrow">Was uns leitet</span>
+                <h2 id="values-title" class="display display--sm">
+                    Drei Prinzipien.<br>
+                    Keine Ausnahmen.
+                </h2>
+            </header>
 
-            <p>
+            <div class="values__grid">
+                <article class="value reveal" data-reveal-delay="0">
+                    <div class="value__num">01</div>
+                    <h3>Ehrliche Herkunft</h3>
+                    <p>
+                        Jede einzelne Dattel kommt aus den Palmenhainen
+                        unserer Familie in Aswan. Keine anonymen Lieferketten,
+                        keine Vermischung von Sorten. Du weißt, woher es kommt
+                        — wir auch.
+                    </p>
+                </article>
 
-                Für uns bedeutet Landwirtschaft mehr als nur Produktion.
-                Es geht um Verantwortung, faire Arbeit und langfristigen Aufbau.
+                <article class="value reveal" data-reveal-delay="80">
+                    <div class="value__num">02</div>
+                    <h3>Faire Arbeit</h3>
+                    <p>
+                        Unsere Erntehelfer arbeiten ganzjährig zu festen
+                        Konditionen, mit Krankenversicherung und einem Anteil
+                        am Verkaufserlös. Premium-Datteln entstehen nicht durch
+                        Druck — sondern durch Sorgfalt.
+                    </p>
+                </article>
 
-                Deshalb arbeiten wir bewusst anders als klassische Massenanbieter.
-                Unsere Datteln stammen direkt aus eigenem Anbau und ausgewählten lokalen Partnerschaften.
+                <article class="value reveal" data-reveal-delay="160">
+                    <div class="value__num">03</div>
+                    <h3>Bedachter Konsum</h3>
+                    <p>
+                        Wir produzieren bedarfsorientiert, nicht im Übermaß.
+                        Was nicht verkauft wird, wird nicht verschwendet.
+                        Verpackt in recyceltem Papier, versendet klimaneutral
+                        innerhalb der Schweiz.
+                    </p>
+                </article>
+            </div>
+        </section>
 
-            </p>
+        <!-- ASWAN STORY (reused from home pattern) -->
+        <section class="story" aria-labelledby="aswan-title">
+            <div class="story__inner">
+                <div class="story__visual reveal">
+                    <div class="story__image">
+                        <img src="images/Produktbild 8.png" alt="Palmenhain in Aswan, Ägypten">
+                    </div>
+                    <div class="story__plate">
+                        <div class="story__plate-row">
+                            <span class="story__plate-key">Familie</span>
+                            <span class="story__plate-val">3. Generation</span>
+                        </div>
+                        <div class="story__plate-row">
+                            <span class="story__plate-key">Land</span>
+                            <span class="story__plate-val">Aswan, Oberägypten</span>
+                        </div>
+                        <div class="story__plate-row">
+                            <span class="story__plate-key">Ernte</span>
+                            <span class="story__plate-val">September – Oktober</span>
+                        </div>
+                    </div>
+                </div>
 
-            <p>
+                <div class="story__copy reveal" data-reveal-delay="120">
+                    <span class="eyebrow">Unsere Wurzeln</span>
+                    <h2 id="aswan-title" class="display display--sm">
+                        Wo der <em>Nil</em><br>
+                        zur <em>Stille</em> wird.
+                    </h2>
+                    <p>
+                        Aswan ist mehr als ein Anbauort. Es ist der Ort, an dem
+                        ein Teil unserer Familie aufgewachsen ist, an dem
+                        unsere Großeltern unsere ersten Palmen pflanzten und
+                        an dem wir bis heute jedes Jahr zur Ernte zurückkehren.
+                    </p>
+                    <p>
+                        Die Region zählt zu den klimatisch besten Anbaugebieten
+                        weltweit — 320 Sonnentage im Jahr, mineralreicher Boden
+                        am Ufer des Nils, kühle Nächte, die den Zucker langsam
+                        reifen lassen. Genau hier entsteht das, was Bena
+                        ausmacht.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-                Wir setzen auf nachhaltige Landwirtschaft, faire Bedingungen und eine transparente Lieferkette —
-                vom Feld bis zu dir nach Hause.
+        <!-- TIMELINE -->
+        <section class="timeline" aria-labelledby="timeline-title">
+            <header class="section-head reveal">
+                <span class="eyebrow">Unsere Reise</span>
+                <h2 id="timeline-title" class="display display--sm">
+                    Vom Palmenhain<br>
+                    in die <em>Schweiz</em>.
+                </h2>
+            </header>
 
-                Statt auf Überproduktion setzen wir auf ein bedarfsorientiertes Modell,
-                um unnötige Verschwendung zu vermeiden und nachhaltiger zu arbeiten.
+            <div class="timeline__inner">
+                <div class="timeline__item reveal" data-reveal-delay="0">
+                    <span class="timeline__year">1962</span>
+                    <h3>Die ersten Palmen</h3>
+                    <p>
+                        Unser Großvater pflanzt am Westufer von Aswan
+                        die ersten 40 Medjool-Palmen. Aus einem Feld
+                        wird über Jahrzehnte eine kleine Pflanzung.
+                    </p>
+                </div>
 
-            </p>
+                <div class="timeline__item reveal" data-reveal-delay="80">
+                    <span class="timeline__year">2003</span>
+                    <h3>Übernahme durch die zweite Generation</h3>
+                    <p>
+                        Unser Onkel führt die Pflanzung weiter und
+                        beginnt mit dem Übergang zu Tröpfchenbewässerung —
+                        lange bevor das in der Region üblich war.
+                    </p>
+                </div>
 
-            <p>
+                <div class="timeline__item reveal" data-reveal-delay="160">
+                    <span class="timeline__year">2022</span>
+                    <h3>Die Idee zu Bena</h3>
+                    <p>
+                        Ein Besuch zur Erntezeit. Eine Kiste der besten Medjool,
+                        die wir je gegessen haben. Und die Frage:
+                        warum gibt es das in dieser Form nicht in der Schweiz?
+                    </p>
+                </div>
 
-                Doch Bena soll mehr sein als nur ein Onlineshop.
+                <div class="timeline__item reveal" data-reveal-delay="240">
+                    <span class="timeline__year">2026</span>
+                    <h3>Bena im Handel</h3>
+                    <p>
+                        Erster Direktimport. Eigene Verpackung, klimaneutraler
+                        Versand und eine Marke, die endlich aussieht, wie sich
+                        diese Datteln anfühlen.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-                Mit jeder Bestellung unterstützt du Menschen vor Ort in Ägypten —
-                durch faire Arbeitsplätze, lokale Entwicklung und soziale Projekte.
+        <!-- FOUNDER QUOTE -->
+        <section class="founder-quote">
+            <figure class="founder-quote__inner reveal">
+                <div class="founder-quote__mark" aria-hidden="true">"</div>
+                <blockquote>
+                    Wenn meine Großmutter heute zusehen könnte,
+                    wie wir die Datteln aus ihrem Feld verpacken,
+                    glaube ich, sie würde lachen — und dann nicken.
+                </blockquote>
+                <figcaption>
+                    <span class="founder-quote__avatar" aria-hidden="true">S</span>
+                    <span>
+                        <strong>Salim Bena</strong>
+                        Co-Founder · Zürich / Aswan
+                    </span>
+                </figcaption>
+            </figure>
+        </section>
 
-            </p>
+        <!-- CTA -->
+        <section class="cta-card">
+            <div class="cta-card__inner reveal">
+                <span class="eyebrow eyebrow--light">Bereit zu probieren?</span>
+                <h2 class="display display--sm">
+                    Eine Geschichte<br>
+                    in <em>jeder Frucht</em>.
+                </h2>
+                <p>
+                    Beginne deine Bena-Reise mit unserer Editor's Box —
+                    drei Sorten direkt aus dem Familienfeld.
+                </p>
+                <div class="cta-card__actions">
+                    <a href="index.html#products" class="btn btn--primary">
+                        <span>Zur Kollektion</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="newsletter.html" class="btn btn--ghost">
+                        Briefe aus Aswan abonnieren
+                    </a>
+                </div>
+            </div>
+        </section>
 
-            <p>
-
-                Wir glauben, dass gute Produkte nicht anonym sein müssen.
-
-                Sie können Herkunft haben.
-                Bedeutung haben.
-                Und Menschen verbinden.
-
-            </p>
-
-        </div>
-
-        <a href="index.html" class="about-button">
-            Zurück zur Startseite
-        </a>
-
-    </section>
+    </main>
 
     <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="index.html" class="footer__logo">Bena<span>.</span></a>
+                <p>
+                    Premium-Datteln aus Aswan.<br>
+                    Mit Liebe versendet in der Schweiz.
+                </p>
+                <div class="footer__socials">
+                    <a href="https://instagram.com/bena.swiss" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
 
-    <footer>
+            <div class="footer__col">
+                <h4>Kollektion</h4>
+                <ul>
+                    <li><a href="product-premium.html">Premium Medjool</a></li>
+                    <li><a href="product-bio.html">Bio Sukkari</a></li>
+                    <li><a href="product-premium.html">Editor's Box</a></li>
+                    <li><a href="index.html#products">Alle ansehen</a></li>
+                </ul>
+            </div>
 
-        <div class="social-icons">
+            <div class="footer__col">
+                <h4>Marke</h4>
+                <ul>
+                    <li><a href="about.html">Unsere Geschichte</a></li>
+                    <li><a href="index.html#story">Aswan, Ägypten</a></li>
+                    <li><a href="index.html#ai-finder">Bena Intelligence</a></li>
+                    <li><a href="newsletter.html">Journal</a></li>
+                </ul>
+            </div>
 
-            <a href="https://instagram.com/bena.goods" target="_blank">
-
-                <i class="fab fa-instagram"></i>
-
-            </a>
-
-            <a href="https://tiktok.com/@bena.goods" target="_blank">
-
-                <i class="fab fa-tiktok"></i>
-
-            </a>
-
-            <a href="https://facebook.com/Bena Goods" target="_blank">
-
-                <i class="fab fa-facebook-f"></i>
-
-            </a>
-
+            <div class="footer__col">
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="shipping.html">Versand &amp; Rückgabe</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                    <li><a href="mailto:hello@bena.swiss">hello@bena.swiss</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
         </div>
 
-        <p>
-            © 2026 Bena – Premium Datteln aus Ägypten
-        </p>
-
+        <div class="footer__base">
+            <p>© 2026 Bena AG — Aswan / Zürich. Alle Rechte vorbehalten.</p>
+            <p>
+                <a href="#">Impressum</a>
+                <span aria-hidden="true">·</span>
+                <a href="#">Datenschutz</a>
+                <span aria-hidden="true">·</span>
+                <a href="#">AGB</a>
+            </p>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- CART SIDEBAR -->
+    <aside class="cart" id="cart-sidebar" aria-label="Warenkorb" aria-hidden="true">
+        <header class="cart__head">
+            <h2>Warenkorb</h2>
+            <button type="button" class="cart__close" onclick="closeCart()" aria-label="Warenkorb schließen">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </header>
+        <div class="cart__body">
+            <div class="cart__empty" id="cart-empty">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <p>Dein Warenkorb ist noch leer.</p>
+                <a href="index.html#products" class="btn btn--ghost" onclick="closeCart()">Kollektion entdecken</a>
+            </div>
+            <ul class="cart__items" id="cart-items"></ul>
+        </div>
+        <footer class="cart__foot" id="cart-foot" hidden>
+            <div class="cart__total">
+                <span>Zwischensumme</span>
+                <strong id="cart-total">CHF 0.00</strong>
+            </div>
+            <button class="btn btn--primary btn--full">Zur Kasse</button>
+            <p class="cart__hint">Versand &amp; Steuern werden im Checkout berechnet.</p>
+        </footer>
+    </aside>
+    <div class="cart-overlay" id="cart-overlay" onclick="closeCart()" hidden></div>
 
+    <script src="script.js" defer></script>
 </body>
 
 </html>
