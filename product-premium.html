@@ -2,452 +2,600 @@
 <html lang="de">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f6f1ea">
+    <title>Premium Medjool — Bena</title>
+    <meta name="description"
+        content="Die größten, weichsten Medjool-Datteln aus den Familienpflanzungen in Aswan. Karamelliges Aroma, naturbelassen, 250 g in eleganter Box.">
 
-    <title>Premium Medjool Datteln | Bena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement" role="region" aria-label="Ankündigung">
+        <div class="announcement__inner">
+            <span class="announcement__item">
+                <i class="fa-solid fa-truck-fast"></i>
+                Kostenloser Versand ab CHF 89
+            </span>
+            <span class="announcement__divider" aria-hidden="true">·</span>
+            <a class="announcement__item announcement__item--link" href="newsletter.html">
+                Jetzt 5% sichern mit dem Newsletter
+            </a>
+            <span class="announcement__divider" aria-hidden="true">·</span>
+            <span class="announcement__item">
+                <i class="fa-solid fa-leaf"></i>
+                Direkt aus Aswan, Ägypten
+            </span>
+        </div>
+    </div>
+
     <header id="site-header" class="site-header"></header>
 
-    <!-- PRODUCT PAGE -->
+    <main>
 
-    <section class="product-page fade-in">
+        <!-- PDP -->
+        <section class="pdp" aria-labelledby="pdp-title">
+            <div class="pdp__inner">
 
-        <div class="product-page-left">
+                <!-- Gallery -->
+                <div class="pdp__gallery">
+                    <div class="breadcrumb" style="margin-bottom: 18px;">
+                        <a href="index.html">Bena</a>
+                        <span aria-hidden="true">/</span>
+                        <a href="index.html#products">Kollektion</a>
+                        <span aria-hidden="true">/</span>
+                        <span>Premium Medjool</span>
+                    </div>
 
-            <!-- MAIN IMAGE -->
+                    <div class="pdp__stage" id="pdp-stage">
+                        <span class="pdp__stage-chip pdp__stage-chip--gold">
+                            Limited Harvest 2026
+                        </span>
+                        <img id="pdp-main"
+                            src="images/Produktbild 6.png"
+                            alt="Premium Medjool Datteln in Bena Verpackung">
+                    </div>
 
-            <img id="main-product-image"
-                src="images/Produktbild 6.png"
-                alt="Premium Medjool">
-
-            <!-- THUMBNAILS -->
-
-            <div class="product-thumbnails">
-
-                <img
-                    src="images/Produktbild 6.png"
-                    alt="Thumbnail 1"
-                    onclick="changeImage(this)">
-
-                <img
-                    src="images/Produktbild 7.png"
-                    alt="Thumbnail 2"
-                    onclick="changeImage(this)">
-
-                <img
-                    src="images/Produktbild 4.png"
-                    alt="Thumbnail 3"
-                    onclick="changeImage(this)">
-
-            </div>
-
-        </div>
-
-        <div class="product-page-right">
-
-            <p class="hero-origin">
-                PREMIUM COLLECTION
-            </p>
-
-            <h1>Premium Medjool Datteln</h1>
-
-            <p class="product-description">
-
-                Große, weiche Premium-Datteln aus Ägypten mit natürlicher Süße und karamelligem Geschmack.
-                Perfekt als hochwertiger Snack oder zum Servieren mit Kaffee und Tee.
-
-            </p>
-
-            <div class="product-price">
-
-                CHF 14.90
-
-            </div>
-
-            <!-- QUANTITY -->
-
-            <div class="quantity-selector">
-
-                <button onclick="decreaseQuantity()">
-
-                    −
-
-                </button>
-
-                <span id="quantity">
-
-                    1
-
-                </span>
-
-                <button onclick="increaseQuantity()">
-
-                    +
-
-                </button>
-
-            </div>
-
-            <!-- TRUST BADGES -->
-
-            <div class="product-trust">
-
-                <div class="trust-badge">
-
-                    🚚 Schnelle Lieferung Schweiz
-
+                    <div class="pdp__thumbs" role="tablist" aria-label="Produktbilder">
+                        <button type="button" class="pdp__thumb is-active"
+                            data-image="images/Produktbild 6.png"
+                            data-alt="Premium Medjool Box"
+                            role="tab"
+                            aria-selected="true">
+                            <img src="images/Produktbild 6.png" alt="">
+                        </button>
+                        <button type="button" class="pdp__thumb"
+                            data-image="images/Produktbild 4.png"
+                            data-alt="Premium Medjool Verpackung von oben"
+                            role="tab">
+                            <img src="images/Produktbild 4.png" alt="">
+                        </button>
+                        <button type="button" class="pdp__thumb"
+                            data-image="images/Produktbild 7.png"
+                            data-alt="Premium Medjool Detail"
+                            role="tab">
+                            <img src="images/Produktbild 7.png" alt="">
+                        </button>
+                        <button type="button" class="pdp__thumb"
+                            data-image="images/Produktbild 8.png"
+                            data-alt="Premium Medjool Lifestyle"
+                            role="tab">
+                            <img src="images/Produktbild 8.png" alt="">
+                        </button>
+                    </div>
                 </div>
 
-                <div class="trust-badge">
+                <!-- Info -->
+                <div class="pdp__info">
+                    <span class="eyebrow">
+                        <span class="eyebrow__dot" aria-hidden="true"></span>
+                        Bena Signature · Limited
+                    </span>
 
-                    🌴 100% Naturprodukt
+                    <h1 id="pdp-title" class="pdp__title">
+                        Premium <em>Medjool</em><br>
+                        Datteln
+                    </h1>
 
+                    <div class="pdp__rating">
+                        <span class="stars" aria-hidden="true">★★★★★</span>
+                        <span>4.9 · 1 248 verifizierte Bewertungen</span>
+                    </div>
+
+                    <p class="pdp__desc">
+                        Die größten und weichsten Medjool aus unseren Pflanzungen
+                        in Aswan. Karamellig, butterweich und seidig im Biss —
+                        unverarbeitet, ungesüßt, ungekühlt geerntet.
+                    </p>
+
+                    <div class="pdp__price-row">
+                        <span class="pdp__price" data-base-price="24.90">CHF 24.90</span>
+                        <span class="pdp__per">250 g · CHF 9.96 / 100 g</span>
+                    </div>
+
+                    <ul class="pdp__bullets">
+                        <li><i class="fa-solid fa-check"></i> Ernte 2026 · September</li>
+                        <li><i class="fa-solid fa-check"></i> 100 % naturbelassen</li>
+                        <li><i class="fa-solid fa-check"></i> Handverlesen in Aswan</li>
+                        <li><i class="fa-solid fa-check"></i> Vegan &amp; glutenfrei</li>
+                        <li><i class="fa-solid fa-check"></i> Recyclebare Verpackung</li>
+                        <li><i class="fa-solid fa-check"></i> CO₂-neutraler Versand</li>
+                    </ul>
+
+                    <div class="pdp__actions">
+                        <div class="pdp__qty" role="group" aria-label="Menge">
+                            <button type="button" class="pdp__qty-dec" aria-label="Weniger">−</button>
+                            <span class="pdp__qty-value" id="pdp-qty">1</span>
+                            <button type="button" class="pdp__qty-inc" aria-label="Mehr">+</button>
+                        </div>
+
+                        <button type="button"
+                            class="pdp__cta js-add-to-cart"
+                            data-name="Premium Medjool Datteln"
+                            data-price="24.90"
+                            data-image="images/Produktbild 6.png">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                            <span>In den Warenkorb · <span class="pdp__cta-price">CHF 24.90</span></span>
+                        </button>
+                    </div>
+
+                    <div class="pdp__trust">
+                        <div class="pdp__trust-item">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            Versand in 24 h · CH
+                        </div>
+                        <div class="pdp__trust-item">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            14 Tage Rückgaberecht
+                        </div>
+                        <div class="pdp__trust-item">
+                            <i class="fa-solid fa-leaf"></i>
+                            Klimaneutral verpackt
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TASTING NOTES -->
+        <section class="tasting" id="tasting" aria-labelledby="tasting-title">
+            <div class="tasting__inner">
+                <div class="tasting__copy reveal">
+                    <span class="eyebrow">Geschmacksprofil</span>
+                    <h2 id="tasting-title" class="display display--sm">
+                        Karamell, Honig,<br>
+                        <em>warmer Sand</em>.
+                    </h2>
+                    <p>
+                        Unsere Medjool reifen langsam unter der Sonne Oberägyptens —
+                        bei Temperaturen, die im Schatten 38°C übersteigen.
+                        Das ergibt eine außergewöhnlich dichte, karamellige Süße
+                        mit feinen Noten von Honig und gerösteten Mandeln.
+                    </p>
                 </div>
 
-                <div class="trust-badge">
-
-                    🔒 Sichere Bestellung
-
+                <div class="tasting__chart reveal" data-reveal-delay="120">
+                    <div class="tasting__row">
+                        <span class="tasting__label">Süße</span>
+                        <div class="tasting__bar">
+                            <div class="tasting__bar-fill" style="--fill: 0.95"></div>
+                        </div>
+                        <span class="tasting__value">5</span>
+                    </div>
+                    <div class="tasting__row">
+                        <span class="tasting__label">Karamell</span>
+                        <div class="tasting__bar">
+                            <div class="tasting__bar-fill" style="--fill: 0.9"></div>
+                        </div>
+                        <span class="tasting__value">5</span>
+                    </div>
+                    <div class="tasting__row">
+                        <span class="tasting__label">Weichheit</span>
+                        <div class="tasting__bar">
+                            <div class="tasting__bar-fill" style="--fill: 0.92"></div>
+                        </div>
+                        <span class="tasting__value">5</span>
+                    </div>
+                    <div class="tasting__row">
+                        <span class="tasting__label">Honig</span>
+                        <div class="tasting__bar">
+                            <div class="tasting__bar-fill" style="--fill: 0.7"></div>
+                        </div>
+                        <span class="tasting__value">4</span>
+                    </div>
+                    <div class="tasting__row">
+                        <span class="tasting__label">Säure</span>
+                        <div class="tasting__bar">
+                            <div class="tasting__bar-fill" style="--fill: 0.2"></div>
+                        </div>
+                        <span class="tasting__value">1</span>
+                    </div>
+                    <div class="tasting__row">
+                        <span class="tasting__label">Intensität</span>
+                        <div class="tasting__bar">
+                            <div class="tasting__bar-fill" style="--fill: 0.85"></div>
+                        </div>
+                        <span class="tasting__value">5</span>
+                    </div>
                 </div>
-
             </div>
+        </section>
 
-            <div class="product-buttons">
+        <!-- PAIRINGS -->
+        <section class="pairings" aria-labelledby="pairings-title">
+            <header class="section-head reveal">
+                <span class="eyebrow">Wie du sie genießt</span>
+                <h2 id="pairings-title" class="display display--sm">
+                    Drei <em>Rituale</em>,<br>
+                    eine Frucht.
+                </h2>
+            </header>
 
-                <button class="hero-button add-to-cart"
-                    data-name="Premium Medjool Datteln"
-                    data-price="14.90">
+            <div class="pairings__grid">
+                <article class="pairing reveal" data-reveal-delay="0">
+                    <div class="pairing__num">01 · Pur</div>
+                    <h3>Mit Espresso</h3>
+                    <p>
+                        Eine Medjool nach dem Espresso ist in Aswan Tradition.
+                        Der Bitterton trifft auf das warme Karamell der Frucht —
+                        einfach, aber unvergesslich.
+                    </p>
+                </article>
 
-                    Jetzt kaufen
+                <article class="pairing reveal" data-reveal-delay="80">
+                    <div class="pairing__num">02 · Gefüllt</div>
+                    <h3>Mit Mandel &amp; Salz</h3>
+                    <p>
+                        Stein entfernen, eine geröstete Mandel hineinstecken,
+                        eine Prise Maldon-Salz. Drei Zutaten, fünf Sekunden,
+                        ein echter Moment.
+                    </p>
+                </article>
 
-                </button>
-
-                <a href="#details" class="hero-button">
-
-                    Mehr erfahren
-
-                </a>
-
+                <article class="pairing reveal" data-reveal-delay="160">
+                    <div class="pairing__num">03 · Cheeseboard</div>
+                    <h3>Mit Blauschimmel</h3>
+                    <p>
+                        Gorgonzola Dolce oder Roquefort — der salzige
+                        Schimmelkäse bekommt durch die Medjool eine süße,
+                        weiche Gegenstimme. Ein Date Night-Klassiker.
+                    </p>
+                </article>
             </div>
-
-        </div>
-
-    </section>
-
-    <!-- PRODUCT DETAILS -->
-
-    <section id="details" class="product-details fade-in">
-
-        <div class="detail-card">
-
-            <div class="detail-icon">
-
-                🌴
-
-            </div>
-
-            <h3>Premium Qualität</h3>
-
-            <p>
-
-                Unsere Medjool Datteln werden sorgfältig ausgewählt und überzeugen
-                durch ihre außergewöhnliche Größe, weiche Konsistenz und natürliche Süße.
-
-            </p>
-
-        </div>
-
-        <div class="detail-card">
-
-            <div class="detail-icon">
-
-                ☀️
-
-            </div>
-
-            <h3>Natürlich Gereift</h3>
-
-            <p>
-
-                Durch das warme Klima im Süden Ägyptens entwickeln die Datteln
-                ihr intensives Aroma ganz natürlich unter der Wüstensonne.
-
-            </p>
-
-        </div>
-
-        <div class="detail-card">
-
-            <div class="detail-icon">
-
-                🤝
-
-            </div>
-
-            <h3>Nachhaltige Herkunft</h3>
-
-            <p>
-
-                Wir setzen auf faire Zusammenarbeit, nachhaltigen Anbau
-                und transparente Lieferketten vom Ursprung bis zur Lieferung.
-
-            </p>
-
-        </div>
-
-    </section>
-
-    <!-- FAQ -->
-
-    <section class="faq-section fade-in">
-
-        <h2>Häufige Fragen</h2>
-
-        <div class="faq-item">
-
-            <button class="faq-question">
-
-                Sind die Datteln ohne Zusatzstoffe?
-
-            </button>
-
-            <div class="faq-answer">
-
-                Ja. Unsere Datteln sind 100% natürlich und ohne künstliche Zusätze.
-
-            </div>
-
-        </div>
-
-        <div class="faq-item">
-
-            <button class="faq-question">
-
-                Wie lange sind die Datteln haltbar?
-
-            </button>
-
-            <div class="faq-answer">
-
-                Kühl und trocken gelagert mehrere Monate.
-
-            </div>
-
-        </div>
-
-        <div class="faq-item">
-
-            <button class="faq-question">
-
-                Woher stammen die Datteln?
-
-            </button>
-
-            <div class="faq-answer">
-
-                Die Datteln stammen aus Ägypten und werden sorgfältig ausgewählt und verarbeitet.
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- REVIEWS -->
-
-    <section class="reviews-section fade-in">
-
-        <h2>Kundenbewertungen</h2>
-
-        <div class="reviews-grid">
-
-            <div class="review-card">
-
-                <div class="review-stars">
-
-                    ★★★★★
-
+        </section>
+
+        <!-- SPECS -->
+        <section class="specs" aria-labelledby="specs-title">
+            <header class="section-head reveal">
+                <span class="eyebrow">Datenblatt</span>
+                <h2 id="specs-title" class="display display--sm">
+                    Volle <em>Transparenz</em>.
+                </h2>
+            </header>
+
+            <div class="specs__inner reveal">
+                <div class="specs__row">
+                    <span class="specs__key">Sorte</span>
+                    <span class="specs__val">Medjool · Premium Grade A</span>
                 </div>
+                <div class="specs__row">
+                    <span class="specs__key">Herkunft</span>
+                    <span class="specs__val">Aswan, Oberägypten · Bena Familienpflanzung</span>
+                </div>
+                <div class="specs__row">
+                    <span class="specs__key">Erntejahr</span>
+                    <span class="specs__val">2026 · Handverlesen</span>
+                </div>
+                <div class="specs__row">
+                    <span class="specs__key">Inhalt</span>
+                    <span class="specs__val">250 g · ca. 12–14 Datteln</span>
+                </div>
+                <div class="specs__row">
+                    <span class="specs__key">Zutaten</span>
+                    <span class="specs__val">100 % Medjool-Datteln. Sonst nichts.</span>
+                </div>
+                <div class="specs__row">
+                    <span class="specs__key">Nährwerte / 100 g</span>
+                    <span class="specs__val">277 kcal · 75 g KH (davon 66 g Zucker, natürlich) · 1.8 g Eiweiß · 6.7 g Ballaststoffe</span>
+                </div>
+                <div class="specs__row">
+                    <span class="specs__key">Lagerung</span>
+                    <span class="specs__val">Kühl &amp; trocken. Nach dem Öffnen im Kühlschrank.</span>
+                </div>
+                <div class="specs__row">
+                    <span class="specs__key">Mindestens haltbar bis</span>
+                    <span class="specs__val">12 Monate ab Versand</span>
+                </div>
+            </div>
+        </section>
 
+        <!-- FAQ -->
+        <section class="faq" aria-labelledby="faq-title">
+            <header class="section-head reveal">
+                <span class="eyebrow">Du fragst, wir antworten</span>
+                <h2 id="faq-title" class="display display--sm">
+                    Häufige <em>Fragen</em>.
+                </h2>
+            </header>
+
+            <div class="faq__inner">
+                <div class="faq__list">
+                    <article class="faq__item reveal">
+                        <button class="faq__question" type="button" aria-expanded="false">
+                            <span>Sind die Datteln wirklich ohne Zusätze?</span>
+                            <span class="faq__icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq__answer">
+                            <div class="faq__answer-inner">
+                                Ja. Unsere Medjool werden ausschließlich gewaschen
+                                und in Handarbeit verpackt. Keine Glasur, kein
+                                Sirup, kein Konservierungsstoff — die natürliche
+                                Glukose der Frucht reicht völlig.
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq__item reveal">
+                        <button class="faq__question" type="button" aria-expanded="false">
+                            <span>Wie schmeckt eine Medjool im Vergleich zur Bio Sukkari?</span>
+                            <span class="faq__icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq__answer">
+                            <div class="faq__answer-inner">
+                                Die Medjool ist deutlich größer, weicher und
+                                karamelliger. Die Sukkari hingegen ist
+                                kompakter, knackiger und schmeckt fast wie
+                                getrockneter Honigkuchen. Wir empfehlen, beide
+                                einmal nebeneinander zu probieren.
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq__item reveal">
+                        <button class="faq__question" type="button" aria-expanded="false">
+                            <span>Wie lange sind sie haltbar?</span>
+                            <span class="faq__icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq__answer">
+                            <div class="faq__answer-inner">
+                                Mindestens 12 Monate ab Versand, bei kühler und
+                                trockener Lagerung. Im Kühlschrank bleiben sie
+                                noch länger frisch — werden allerdings etwas
+                                fester. Vor dem Genuss kurz Raumtemperatur
+                                annehmen lassen.
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq__item reveal">
+                        <button class="faq__question" type="button" aria-expanded="false">
+                            <span>Wie schnell wird geliefert?</span>
+                            <span class="faq__icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq__answer">
+                            <div class="faq__answer-inner">
+                                Innerhalb der Schweiz versenden wir mit der Post
+                                A-Post — Lieferung am nächsten Werktag.
+                                Bestellungen vor 11:00 verlassen unser Lager am
+                                selben Tag.
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq__item reveal">
+                        <button class="faq__question" type="button" aria-expanded="false">
+                            <span>Was passiert, wenn ich die Datteln nicht mag?</span>
+                            <span class="faq__icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq__answer">
+                            <div class="faq__answer-inner">
+                                Schreib uns innerhalb von 14 Tagen — wir
+                                erstatten dir den vollen Betrag zurück, ohne
+                                lange Diskussion. Auch die geöffnete Packung
+                                musst du nicht zurückschicken.
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- REVIEWS -->
+        <section class="reviews" aria-labelledby="reviews-title">
+            <header class="section-head reveal">
+                <span class="eyebrow">Stimmen unserer Kund:innen</span>
+                <h2 id="reviews-title" class="display display--sm">
+                    4.9★ — von <em>1 248</em><br>
+                    verifizierten Käufern.
+                </h2>
+            </header>
+
+            <div class="reviews__grid">
+                <figure class="review reveal" data-reveal-delay="0">
+                    <div class="review__rating" aria-hidden="true">★★★★★</div>
+                    <blockquote>
+                        "Ich dachte, ich kenne Datteln. Bis ich diese probiert
+                        habe. Karamell pur — fast wie Toffee. Werde sie nie
+                        wieder im Supermarkt kaufen."
+                    </blockquote>
+                    <figcaption>
+                        <strong>Sarah M.</strong>
+                        <span>Zürich · Verifizierter Käufer</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="review reveal" data-reveal-delay="120">
+                    <div class="review__rating" aria-hidden="true">★★★★★</div>
+                    <blockquote>
+                        "Die Verpackung allein ist schon ein Geschenk. Aber der
+                        Geschmack — das ist ein anderes Level. Habe sie bei
+                        meinem letzten Dinner serviert, alle waren begeistert."
+                    </blockquote>
+                    <figcaption>
+                        <strong>Daniel K.</strong>
+                        <span>Basel · Verifizierter Käufer</span>
+                    </figcaption>
+                </figure>
+
+                <figure class="review reveal" data-reveal-delay="240">
+                    <div class="review__rating" aria-hidden="true">★★★★★</div>
+                    <blockquote>
+                        "Habe meine Mama in Kairo angerufen, nachdem ich sie
+                        probiert habe. 'Genau so haben die früher geschmeckt',
+                        meinte sie. Mehr Kompliment geht nicht."
+                    </blockquote>
+                    <figcaption>
+                        <strong>Leila A.</strong>
+                        <span>Genf · Verifizierter Käufer</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-card">
+            <div class="cta-card__inner reveal">
+                <span class="eyebrow eyebrow--light">Auch interessant</span>
+                <h2 class="display display--sm">
+                    Probiere auch unsere<br>
+                    <em>Bio Sukkari</em>.
+                </h2>
                 <p>
-
-                    Extrem weich und unglaublich lecker.
-                    Die besten Medjool Datteln die ich bisher probiert habe.
-
+                    Knackiger, kompakter, mit feiner Honigsüße. Die Lieblingssorte
+                    der Aswan-Familie.
                 </p>
-
-                <h4>
-
-                    — Sarah M.
-
-                </h4>
-
-            </div>
-
-            <div class="review-card">
-
-                <div class="review-stars">
-
-                    ★★★★★
-
+                <div class="cta-card__actions">
+                    <a href="product-bio.html" class="btn btn--primary">
+                        <span>Bio Sukkari ansehen</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="index.html#products" class="btn btn--ghost">Alle Sorten</a>
                 </div>
-
-                <p>
-
-                    Man merkt sofort den Qualitätsunterschied.
-                    Super Verpackung und schnelle Lieferung.
-
-                </p>
-
-                <h4>
-
-                    — Daniel K.
-
-                </h4>
-
             </div>
+        </section>
 
-            <div class="review-card">
-
-                <div class="review-stars">
-
-                    ★★★★★
-
-                </div>
-
-                <p>
-
-                    Sehr hochwertig und perfekt als gesunder Snack.
-                    Werde definitiv wieder bestellen.
-
-                </p>
-
-                <h4>
-
-                    — Leila A.
-
-                </h4>
-
-            </div>
-
-        </div>
-
-    </section>
+    </main>
 
     <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="index.html" class="footer__logo">Bena<span>.</span></a>
+                <p>
+                    Premium-Datteln aus Aswan.<br>
+                    Mit Liebe versendet in der Schweiz.
+                </p>
+                <div class="footer__socials">
+                    <a href="https://instagram.com/bena.swiss" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
+            </div>
 
-    <footer>
+            <div class="footer__col">
+                <h4>Kollektion</h4>
+                <ul>
+                    <li><a href="product-premium.html">Premium Medjool</a></li>
+                    <li><a href="product-bio.html">Bio Sukkari</a></li>
+                    <li><a href="product-premium.html">Editor's Box</a></li>
+                    <li><a href="index.html#products">Alle ansehen</a></li>
+                </ul>
+            </div>
 
-        <div class="social-links">
+            <div class="footer__col">
+                <h4>Marke</h4>
+                <ul>
+                    <li><a href="about.html">Unsere Geschichte</a></li>
+                    <li><a href="index.html#story">Aswan, Ägypten</a></li>
+                    <li><a href="index.html#ai-finder">Bena Intelligence</a></li>
+                    <li><a href="newsletter.html">Journal</a></li>
+                </ul>
+            </div>
 
-            <a href="https://instagram.com/bena.swiss" target="_blank">
-
-                <i class="fab fa-instagram"></i>
-
-            </a>
-
-            <a href="https://facebook.com" target="_blank">
-
-                <i class="fab fa-facebook"></i>
-
-            </a>
-
-            <a href="https://tiktok.com" target="_blank">
-
-                <i class="fab fa-tiktok"></i>
-
-            </a>
-
+            <div class="footer__col">
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="shipping.html">Versand &amp; Rückgabe</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                    <li><a href="mailto:hello@bena.swiss">hello@bena.swiss</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
         </div>
 
-        <p>
-            © 2026 Bena – Premium Datteln aus Ägypten
-        </p>
-
+        <div class="footer__base">
+            <p>© 2026 Bena AG — Aswan / Zürich. Alle Rechte vorbehalten.</p>
+            <p>
+                <a href="#">Impressum</a>
+                <span aria-hidden="true">·</span>
+                <a href="#">Datenschutz</a>
+                <span aria-hidden="true">·</span>
+                <a href="#">AGB</a>
+            </p>
+        </div>
     </footer>
 
-    <!-- STICKY BUY MOBILE -->
-
+    <!-- STICKY BUY BAR (mobile) -->
     <div class="sticky-buy">
-
-        <div class="sticky-price">
-
-            CHF 14.90
-
+        <div class="sticky-buy__price">
+            <small>250 g · Medjool</small>
+            <strong class="sticky-buy__amount">CHF 24.90</strong>
         </div>
-
-        <button class="sticky-button add-to-cart">
-
-            Jetzt kaufen
-
+        <button type="button"
+            class="sticky-buy__cta js-add-to-cart"
+            data-name="Premium Medjool Datteln"
+            data-price="24.90"
+            data-image="images/Produktbild 6.png">
+            In den Warenkorb
         </button>
-
     </div>
 
     <!-- CART SIDEBAR -->
-
-    <div class="cart-sidebar" id="cart-sidebar">
-
-        <div class="cart-header">
-
+    <aside class="cart" id="cart-sidebar" aria-label="Warenkorb" aria-hidden="true">
+        <header class="cart__head">
             <h2>Warenkorb</h2>
-
-            <button onclick="closeCart()">
-
-                ✕
-
+            <button type="button" class="cart__close" onclick="closeCart()" aria-label="Warenkorb schließen">
+                <i class="fa-solid fa-xmark"></i>
             </button>
-
-        </div>
-
-        <div class="cart-content">
-
-            <div class="cart-item">
-
-                <img src="images/Produktbild 6.png" alt="Produkt">
-
-                <div>
-
-                    <h4>Premium Medjool Datteln</h4>
-
-                    <p>CHF 14.90</p>
-
-                </div>
-
+        </header>
+        <div class="cart__body">
+            <div class="cart__empty" id="cart-empty">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <p>Dein Warenkorb ist noch leer.</p>
+                <a href="index.html#products" class="btn btn--ghost" onclick="closeCart()">Kollektion entdecken</a>
             </div>
-
+            <ul class="cart__items" id="cart-items"></ul>
         </div>
+        <footer class="cart__foot" id="cart-foot" hidden>
+            <div class="cart__total">
+                <span>Zwischensumme</span>
+                <strong id="cart-total">CHF 0.00</strong>
+            </div>
+            <button class="btn btn--primary btn--full">Zur Kasse</button>
+            <p class="cart__hint">Versand &amp; Steuern werden im Checkout berechnet.</p>
+        </footer>
+    </aside>
+    <div class="cart-overlay" id="cart-overlay" onclick="closeCart()" hidden></div>
 
-        <div class="cart-footer">
-
-            <button class="checkout-button">
-
-                Zur Kasse
-
-            </button>
-
-        </div>
-
-    </div>
-
-    <!-- CART OVERLAY -->
-
-    <div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
-
-    <script src="script.js"></script>
-
+    <script src="script.js" defer></script>
 </body>
 
 </html>
