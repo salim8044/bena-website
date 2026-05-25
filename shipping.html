@@ -2,83 +2,477 @@
 <html lang="de">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f6f1ea">
+    <title>Versand &amp; Lieferung — Bena</title>
+    <meta name="description"
+        content="Schneller, klimaneutraler Versand in der ganzen Schweiz. Lieferung am nächsten Tag, kostenlos ab CHF 89, sorgfältig verpackt.">
 
-    <title>Versand | Bena</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
+    <div class="announcement" role="region" aria-label="Ankündigung">
+        <div class="announcement__inner">
+            <span class="announcement__item">
+                <i class="fa-solid fa-truck-fast"></i>
+                Kostenloser Versand ab CHF 89
+            </span>
+            <span class="announcement__divider" aria-hidden="true">·</span>
+            <a class="announcement__item announcement__item--link" href="newsletter.html">
+                Jetzt 5% sichern mit dem Newsletter
+            </a>
+            <span class="announcement__divider" aria-hidden="true">·</span>
+            <span class="announcement__item">
+                <i class="fa-solid fa-leaf"></i>
+                Direkt aus Aswan, Ägypten
+            </span>
+        </div>
+    </div>
+
     <header id="site-header" class="site-header"></header>
 
-    <!-- SHIPPING PAGE -->
+    <main>
 
-    <section class="shipping-page">
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="page-hero__bg" aria-hidden="true"></div>
 
-        <div class="shipping-box">
+            <div class="page-hero__inner reveal">
+                <div class="breadcrumb">
+                    <a href="index.html">Bena</a>
+                    <span aria-hidden="true">/</span>
+                    <span>Versand</span>
+                </div>
 
-            <div class="shipping-left-page">
+                <span class="eyebrow">
+                    <span class="eyebrow__dot" aria-hidden="true"></span>
+                    Versand &amp; Lieferung
+                </span>
 
-                <p class="section-tag">
-
-                    SCHNELLE LIEFERUNG
-
-                </p>
-
-                <h1>
-
-                    Versandinformationen
-
+                <h1 class="display display--sm">
+                    Morgen <em>bei dir</em>.<br>
+                    Schweizweit.
                 </h1>
 
-                <p>
-
-                    Wir liefern schnell und zuverlässig innerhalb der Schweiz.
-
+                <p class="page-hero__lede">
+                    Wir versenden klimaneutral mit der Post Schweiz. Bestellungen
+                    bis 11:00 verlassen unser Lager am selben Tag — und sind in
+                    der Regel am nächsten Werktag bei dir.
                 </p>
+            </div>
+        </section>
 
+        <!-- KEY FEATURES -->
+        <section class="shipping-features" aria-labelledby="features-title">
+            <h2 id="features-title" class="visually-hidden">Versandvorteile</h2>
+
+            <div class="shipping-features__grid">
+                <article class="shipping-feature reveal" data-reveal-delay="0">
+                    <div class="shipping-feature__icon">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3>24 h Lieferung</h3>
+                    <p>
+                        Bestellungen bis 11:00 verlassen am selben Tag unser
+                        Lager in Zürich-Oerlikon. A-Post bringt sie am nächsten
+                        Werktag zu dir.
+                    </p>
+                    <div class="shipping-feature__meta">CH · Post A-Post Plus</div>
+                </article>
+
+                <article class="shipping-feature reveal" data-reveal-delay="80">
+                    <div class="shipping-feature__icon">
+                        <i class="fa-solid fa-gift"></i>
+                    </div>
+                    <h3>Kostenlos ab CHF 89</h3>
+                    <p>
+                        Ab einem Bestellwert von 89 Franken liefern wir
+                        portofrei. Darunter berechnen wir den effektiven
+                        Postpreis — keine versteckten Aufschläge.
+                    </p>
+                    <div class="shipping-feature__meta">Schweizweit · Liechtenstein inkl.</div>
+                </article>
+
+                <article class="shipping-feature reveal" data-reveal-delay="160">
+                    <div class="shipping-feature__icon">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h3>Klimaneutral verpackt</h3>
+                    <p>
+                        Recycelte Wellpappe, kompostierbares Klebeband, keine
+                        Plastikfüllung. Der CO₂-Ausgleich für jeden Versand ist
+                        bereits im Preis inbegriffen.
+                    </p>
+                    <div class="shipping-feature__meta">FSC · pro Clima zertifiziert</div>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROCESS STEPS -->
+        <section class="steps" aria-labelledby="steps-title">
+            <header class="section-head reveal">
+                <span class="eyebrow">Von der Bestellung bis zu dir</span>
+                <h2 id="steps-title" class="display display--sm">
+                    Vier <em>Schritte</em>,<br>
+                    keine Umwege.
+                </h2>
+            </header>
+
+            <div class="steps__grid">
+                <article class="step reveal" data-reveal-delay="0">
+                    <span class="step__num">01</span>
+                    <h3>Du bestellst</h3>
+                    <p>
+                        Du legst die Datteln in deinen Warenkorb und schließt
+                        die Bestellung ab. Eine Bestätigungs-E-Mail kommt
+                        innerhalb von 60 Sekunden.
+                    </p>
+                </article>
+
+                <article class="step reveal" data-reveal-delay="80">
+                    <span class="step__num">02</span>
+                    <h3>Wir verpacken</h3>
+                    <p>
+                        In unserem kleinen Lager in Zürich verpacken wir deine
+                        Bestellung von Hand — meist innerhalb weniger Stunden.
+                        Du bekommst eine Tracking-Nummer per Mail.
+                    </p>
+                </article>
+
+                <article class="step reveal" data-reveal-delay="160">
+                    <span class="step__num">03</span>
+                    <h3>Die Post liefert</h3>
+                    <p>
+                        Per A-Post Plus mit der Schweizerischen Post — in der
+                        Regel innerhalb von 24 Stunden bei dir.
+                        Inselgemeinden und Berggebiete bis zu 48 h.
+                    </p>
+                </article>
+
+                <article class="step reveal" data-reveal-delay="240">
+                    <span class="step__num">04</span>
+                    <h3>Du genießt</h3>
+                    <p>
+                        Box öffnen, durchatmen, eine Dattel nehmen. Pack die
+                        Datteln nach dem Öffnen in den Kühlschrank — sie
+                        bleiben so monatelang frisch.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- PRICING TABLE -->
+        <section class="pricing" aria-labelledby="pricing-title">
+            <header class="section-head reveal">
+                <span class="eyebrow">Versandkosten</span>
+                <h2 id="pricing-title" class="display display--sm">
+                    Transparente <em>Preise</em>.
+                </h2>
+            </header>
+
+            <div class="pricing__inner reveal">
+                <div class="pricing__table">
+                    <div class="pricing__head">
+                        <span>Zone</span>
+                        <span>Lieferzeit</span>
+                        <span>Preis</span>
+                    </div>
+
+                    <div class="pricing__row">
+                        <span class="pricing__zone">Schweiz · Standard</span>
+                        <span class="pricing__time">2–3 Werktage</span>
+                        <span class="pricing__price">CHF 6.90</span>
+                    </div>
+
+                    <div class="pricing__row">
+                        <span class="pricing__zone">Schweiz · Express A-Post</span>
+                        <span class="pricing__time">1 Werktag</span>
+                        <span class="pricing__price">CHF 9.90</span>
+                    </div>
+
+                    <div class="pricing__row">
+                        <span class="pricing__zone">Schweiz · ab CHF 89</span>
+                        <span class="pricing__time">1–2 Werktage</span>
+                        <span class="pricing__price pricing__price--free">Kostenlos</span>
+                    </div>
+
+                    <div class="pricing__row">
+                        <span class="pricing__zone">Liechtenstein</span>
+                        <span class="pricing__time">2–3 Werktage</span>
+                        <span class="pricing__price">CHF 8.90</span>
+                    </div>
+
+                    <div class="pricing__row">
+                        <span class="pricing__zone">EU · Deutschland, Österreich</span>
+                        <span class="pricing__time">3–5 Werktage</span>
+                        <span class="pricing__price">CHF 14.90</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ASWAN STORY (reused) — packaging philosophy -->
+        <section class="story" aria-labelledby="packaging-title">
+            <div class="story__inner">
+                <div class="story__visual reveal">
+                    <div class="story__image">
+                        <img src="images/Produktbild 4.png" alt="Bena Verpackung von oben">
+                    </div>
+                    <div class="story__plate">
+                        <div class="story__plate-row">
+                            <span class="story__plate-key">Karton</span>
+                            <span class="story__plate-val">100% recycelt · FSC</span>
+                        </div>
+                        <div class="story__plate-row">
+                            <span class="story__plate-key">Klebeband</span>
+                            <span class="story__plate-val">Kompostierbar</span>
+                        </div>
+                        <div class="story__plate-row">
+                            <span class="story__plate-key">Füllmaterial</span>
+                            <span class="story__plate-val">Papier · keine Folie</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="story__copy reveal" data-reveal-delay="120">
+                    <span class="eyebrow">Unsere Verpackung</span>
+                    <h2 id="packaging-title" class="display display--sm">
+                        Schön. Funktional.<br>
+                        <em>Vollständig recyclebar</em>.
+                    </h2>
+                    <p>
+                        Wir haben monatelang an unserer Verpackung gefeilt — bis
+                        sie nicht nur schön aussieht, sondern auch komplett
+                        kreislauffähig ist. Karton aus recyceltem Papier,
+                        kompostierbares Klebeband, Kraftpapier statt Folie.
+                    </p>
+                    <p>
+                        Du kannst die komplette Verpackung in den Altpapierkreislauf
+                        geben oder als Geschenkkarton weiterverwenden. Viele
+                        unserer Kund:innen tun genau das.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="faq" aria-labelledby="ship-faq-title">
+            <header class="section-head reveal">
+                <span class="eyebrow">Häufige Fragen</span>
+                <h2 id="ship-faq-title" class="display display--sm">
+                    Versand &amp; <em>Rückgabe</em>.
+                </h2>
+            </header>
+
+            <div class="faq__inner">
+                <div class="faq__list">
+                    <article class="faq__item reveal">
+                        <button class="faq__question" type="button" aria-expanded="false">
+                            <span>Wann erhalte ich meine Tracking-Nummer?</span>
+                            <span class="faq__icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq__answer">
+                            <div class="faq__answer-inner">
+                                Sobald wir dein Paket verpackt und an die Post
+                                übergeben haben — meistens am gleichen Tag,
+                                spätestens am Folgetag. Die Mail enthält einen
+                                Link zur Live-Sendungsverfolgung.
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq__item reveal">
+                        <button class="faq__question" type="button" aria-expanded="false">
+                            <span>Kann ich das Paket an einen anderen Ort liefern lassen?</span>
+                            <span class="faq__icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq__answer">
+                            <div class="faq__answer-inner">
+                                Ja. Im Checkout kannst du eine abweichende
+                                Lieferadresse angeben. Auch eine Lieferung an
+                                eine Post-Filiale oder Abholstelle ist möglich
+                                — wähle dafür "MyPost 24" als Adresse.
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq__item reveal">
+                        <button class="faq__question" type="button" aria-expanded="false">
+                            <span>Was, wenn ich nicht zuhause bin?</span>
+                            <span class="faq__icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq__answer">
+                            <div class="faq__answer-inner">
+                                Die Schweizerische Post hinterlässt eine
+                                Abholbenachrichtigung. Du kannst das Paket dann
+                                in deiner Postfiliale abholen — oder über die
+                                Post-App eine zweite Zustellung planen.
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq__item reveal">
+                        <button class="faq__question" type="button" aria-expanded="false">
+                            <span>Wie ist die Rückgabe geregelt?</span>
+                            <span class="faq__icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq__answer">
+                            <div class="faq__answer-inner">
+                                Du hast 14 Tage Zeit, dich zu entscheiden.
+                                Solltest du nicht überzeugt sein, schreib uns
+                                eine Mail — wir erstatten dir den vollen
+                                Kaufbetrag, ohne Diskussion. Die Datteln musst
+                                du nicht zurückschicken.
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="faq__item reveal">
+                        <button class="faq__question" type="button" aria-expanded="false">
+                            <span>Liefert ihr ins Ausland?</span>
+                            <span class="faq__icon" aria-hidden="true"><i class="fa-solid fa-plus"></i></span>
+                        </button>
+                        <div class="faq__answer">
+                            <div class="faq__answer-inner">
+                                Aktuell nach Liechtenstein, Deutschland und
+                                Österreich. Frankreich, Italien und weitere
+                                Länder folgen ab Sommer 2026 — trag dich in
+                                unseren Newsletter ein, wir informieren dich.
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-card">
+            <div class="cta-card__inner reveal">
+                <span class="eyebrow eyebrow--light">Fragen offen?</span>
+                <h2 class="display display--sm">
+                    Wir antworten<br>
+                    <em>persönlich</em>.
+                </h2>
                 <p>
-
-                    Ab einem Bestellwert von CHF 89 ist der Versand kostenlos.
-
+                    Hinter Bena steht ein kleines Team. Schreib uns —
+                    wir antworten meistens innerhalb weniger Stunden.
                 </p>
+                <div class="cta-card__actions">
+                    <a href="mailto:hello@bena.swiss" class="btn btn--primary">
+                        <span>hello@bena.swiss</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="index.html#products" class="btn btn--ghost">Zur Kollektion</a>
+                </div>
+            </div>
+        </section>
 
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__brand">
+                <a href="index.html" class="footer__logo">Bena<span>.</span></a>
                 <p>
-
-                    Jede Bestellung wird sorgfältig verpackt und direkt aus unserem Lager versendet.
-
+                    Premium-Datteln aus Aswan.<br>
+                    Mit Liebe versendet in der Schweiz.
                 </p>
-
-                <p>
-
-                    Lieferzeit:
-                    2–4 Werktage innerhalb der Schweiz.
-
-                </p>
-
+                <div class="footer__socials">
+                    <a href="https://instagram.com/bena.swiss" target="_blank" rel="noopener noreferrer"
+                        aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                </div>
             </div>
 
-            <div class="shipping-right-page">
-
-                <img src="images/Produktbild 4.png" alt="Versand Bena">
-
+            <div class="footer__col">
+                <h4>Kollektion</h4>
+                <ul>
+                    <li><a href="product-premium.html">Premium Medjool</a></li>
+                    <li><a href="product-bio.html">Bio Sukkari</a></li>
+                    <li><a href="product-premium.html">Editor's Box</a></li>
+                    <li><a href="index.html#products">Alle ansehen</a></li>
+                </ul>
             </div>
 
+            <div class="footer__col">
+                <h4>Marke</h4>
+                <ul>
+                    <li><a href="about.html">Unsere Geschichte</a></li>
+                    <li><a href="index.html#story">Aswan, Ägypten</a></li>
+                    <li><a href="index.html#ai-finder">Bena Intelligence</a></li>
+                    <li><a href="newsletter.html">Journal</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4>Service</h4>
+                <ul>
+                    <li><a href="shipping.html">Versand &amp; Rückgabe</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                    <li><a href="mailto:hello@bena.swiss">hello@bena.swiss</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
         </div>
 
-    </section>
+        <div class="footer__base">
+            <p>© 2026 Bena AG — Aswan / Zürich. Alle Rechte vorbehalten.</p>
+            <p>
+                <a href="#">Impressum</a>
+                <span aria-hidden="true">·</span>
+                <a href="#">Datenschutz</a>
+                <span aria-hidden="true">·</span>
+                <a href="#">AGB</a>
+            </p>
+        </div>
+    </footer>
 
-    <script src="script.js"></script>
+    <!-- CART SIDEBAR -->
+    <aside class="cart" id="cart-sidebar" aria-label="Warenkorb" aria-hidden="true">
+        <header class="cart__head">
+            <h2>Warenkorb</h2>
+            <button type="button" class="cart__close" onclick="closeCart()" aria-label="Warenkorb schließen">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </header>
+        <div class="cart__body">
+            <div class="cart__empty" id="cart-empty">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <p>Dein Warenkorb ist noch leer.</p>
+                <a href="index.html#products" class="btn btn--ghost" onclick="closeCart()">Kollektion entdecken</a>
+            </div>
+            <ul class="cart__items" id="cart-items"></ul>
+        </div>
+        <footer class="cart__foot" id="cart-foot" hidden>
+            <div class="cart__total">
+                <span>Zwischensumme</span>
+                <strong id="cart-total">CHF 0.00</strong>
+            </div>
+            <button class="btn btn--primary btn--full">Zur Kasse</button>
+            <p class="cart__hint">Versand &amp; Steuern werden im Checkout berechnet.</p>
+        </footer>
+    </aside>
+    <div class="cart-overlay" id="cart-overlay" onclick="closeCart()" hidden></div>
 
+    <script src="script.js" defer></script>
 </body>
 
 </html>
