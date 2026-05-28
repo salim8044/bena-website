@@ -4123,3 +4123,576 @@ body.nav-open {
     font-size: 14px;
     line-height: 1.7;
 }
+
+/* =========================================================================
+   28. REFINEMENT LAYER  (calmer, less AI-startup, more luxury ecommerce)
+   This block intentionally overrides earlier rules.
+   ========================================================================= */
+
+/* ---- Announcement bar : single calm message ---------------------------- */
+.announcement {
+    background: var(--ink-1);
+    color: rgba(250, 245, 236, 0.78);
+    font-size: 12px;
+    letter-spacing: 0.08em;
+}
+
+.announcement__inner {
+    padding: 11px var(--gutter);
+    gap: 10px;
+}
+
+.announcement__item {
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+}
+
+.announcement__item i { display: none; }
+
+/* ---- Section rhythm : more whitespace, calmer scale -------------------- */
+:root {
+    --section-y: clamp(96px, 12vw, 160px);
+}
+
+.showcase,
+.story,
+.sustain,
+.sommelier,
+.reviews,
+.newsletter {
+    padding-top: var(--section-y);
+    padding-bottom: var(--section-y);
+}
+
+.section-head {
+    margin-bottom: clamp(48px, 6vw, 72px);
+}
+
+.section-head--center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 640px;
+}
+
+.section-head--center .eyebrow {
+    justify-content: center;
+}
+
+/* ---- Eyebrow : less dot, more typographic ------------------------------- */
+.eyebrow {
+    color: var(--ink-3);
+    letter-spacing: 0.22em;
+    font-weight: 500;
+    font-size: 11px;
+}
+
+.eyebrow__dot { display: none; }
+
+/* ---- Display type : refined italic accent ------------------------------ */
+.display em {
+    font-style: italic;
+    color: var(--ink-1);
+    position: relative;
+}
+
+/* ---- Buttons : quieter, more confident --------------------------------- */
+.btn {
+    transition: background var(--t-med) var(--ease-out),
+        color var(--t-med) var(--ease-out),
+        border-color var(--t-med) var(--ease-out);
+}
+
+.btn--primary {
+    box-shadow: none;
+}
+
+.btn--primary:hover {
+    background: var(--accent-deep);
+    transform: none;
+    box-shadow: none;
+}
+
+.btn--ghost:hover {
+    transform: none;
+}
+
+.btn i { display: none; }
+
+/* ---- Reveal : subtler ---------------------------------------------------- */
+.reveal {
+    transform: translateY(16px);
+    transition:
+        opacity 700ms var(--ease-out),
+        transform 700ms var(--ease-out);
+}
+
+/* ---- HERO : quieter background, no chips, calmer card ------------------ */
+.hero {
+    padding-top: clamp(48px, 7vw, 96px);
+    padding-bottom: var(--section-y);
+}
+
+.hero__orb {
+    opacity: 0.32;
+    filter: blur(110px);
+    animation: none !important;
+}
+
+.hero__orb--1 {
+    width: 480px;
+    height: 480px;
+    top: -160px;
+    left: -160px;
+}
+
+.hero__orb--2 {
+    width: 520px;
+    height: 520px;
+    bottom: -260px;
+    right: -180px;
+    opacity: 0.22;
+}
+
+.hero__grain { display: none; }
+
+.hero__inner {
+    gap: clamp(48px, 8vw, 110px);
+    align-items: center;
+}
+
+.hero__copy h1 {
+    margin-bottom: 32px;
+}
+
+.hero__copy .lede {
+    max-width: 46ch;
+    margin-bottom: 44px;
+}
+
+.hero__ctas {
+    margin-bottom: 0;
+}
+
+.hero__meta { display: none; }
+
+.hero__marquee { display: none; }
+
+.hero__card {
+    border-radius: var(--r-xl);
+    box-shadow: 0 30px 60px -30px rgba(31, 24, 19, 0.18);
+    transform: none !important;
+}
+
+.hero__card-glow,
+.hero__chip { display: none; }
+
+/* ---- Product cards : calmer, drop the shine + tag clutter --------------- */
+.product__shine { display: none; }
+
+.product__cta { display: none; }
+
+.product:hover {
+    transform: none;
+}
+
+.product__media {
+    background: linear-gradient(170deg, #f3ead9 0%, #ece0c9 100%);
+}
+
+.product__tag {
+    background: rgba(31, 24, 19, 0.82);
+    color: var(--bg-elevated);
+    box-shadow: none;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 10px;
+    font-weight: 500;
+    padding: 6px 12px;
+}
+
+.product__tag--gold,
+.product__tag--organic {
+    background: rgba(31, 24, 19, 0.82);
+    color: var(--bg-elevated);
+}
+
+.product__body {
+    padding-top: 24px;
+}
+
+.product__head {
+    margin-bottom: 10px;
+}
+
+.product__head h3 {
+    font-family: var(--f-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    font-size: 22px;
+}
+
+.product__price {
+    font-family: var(--f-display);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--ink-2);
+}
+
+.product__attrs {
+    margin-top: 14px;
+    font-size: 12px;
+    color: var(--ink-4);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.product__attrs .product__dot { display: none; }
+
+.product__link:hover .product__media img {
+    transform: scale(1.03);
+}
+
+/* ---- Story : softer plate --------------------------------------------- */
+.story__plate {
+    box-shadow: 0 20px 50px -30px rgba(31, 24, 19, 0.18);
+    border: 1px solid var(--line);
+}
+
+/* ---- SUSTAIN : numerals instead of icon-backgrounds ------------------- */
+.sustain__grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 22px;
+}
+
+@media (max-width: 860px) {
+    .sustain__grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+.sustain__card {
+    padding: 40px 36px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    box-shadow: none;
+}
+
+.sustain__card:hover {
+    transform: none;
+    box-shadow: 0 20px 50px -30px rgba(31, 24, 19, 0.16);
+}
+
+.sustain__icon { display: none; }
+
+.sustain__num {
+    font-family: var(--f-display);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--ink-4);
+    margin-bottom: 28px;
+    letter-spacing: 0.02em;
+}
+
+.sustain__card h3 {
+    font-family: var(--f-display);
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--ink-1);
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+}
+
+.sustain__card p {
+    color: var(--ink-3);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.sustain__card p strong {
+    color: var(--ink-1);
+    font-weight: 500;
+}
+
+/* ---- SOMMELIER (replaces ai-finder visuals) --------------------------- */
+.sommelier {
+    background: var(--bg-elevated);
+}
+
+.sommelier__inner {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.sommelier__panel {
+    margin-top: clamp(40px, 5vw, 56px);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r-xl);
+    padding: clamp(28px, 4vw, 44px);
+    box-shadow: 0 30px 60px -40px rgba(31, 24, 19, 0.15);
+}
+
+.sommelier__field {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--line-strong);
+    padding-bottom: 6px;
+    transition: border-color var(--t-med) var(--ease-out);
+}
+
+.sommelier__field:focus-within {
+    border-color: var(--ink-1);
+}
+
+.sommelier__field input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 16px 8px 16px 0;
+    font-family: var(--f-display);
+    font-size: clamp(18px, 2vw, 22px);
+    color: var(--ink-1);
+    font-weight: 400;
+    letter-spacing: -0.005em;
+}
+
+.sommelier__field input::placeholder {
+    color: var(--ink-4);
+    font-style: italic;
+}
+
+.sommelier__submit {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--ink-1);
+    color: var(--bg-elevated);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--t-med) var(--ease-out);
+    flex-shrink: 0;
+}
+
+.sommelier__submit:hover {
+    background: var(--accent-deep);
+}
+
+.sommelier__chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.sommelier__chips button {
+    padding: 8px 16px;
+    border: 1px solid var(--line);
+    background: transparent;
+    border-radius: var(--r-pill);
+    font-size: 13px;
+    color: var(--ink-3);
+    cursor: pointer;
+    transition:
+        background var(--t-med) var(--ease-out),
+        color var(--t-med) var(--ease-out),
+        border-color var(--t-med) var(--ease-out);
+}
+
+.sommelier__chips button:hover {
+    color: var(--ink-1);
+    border-color: var(--ink-2);
+    background: var(--bg-base);
+}
+
+.sommelier__status {
+    margin-top: 28px;
+    font-size: 13px;
+    color: var(--ink-4);
+    min-height: 1.4em;
+    letter-spacing: 0.04em;
+}
+
+.sommelier__result {
+    margin-top: 8px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+        opacity 500ms var(--ease-out),
+        transform 500ms var(--ease-out);
+}
+
+.sommelier__result.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.rec {
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+}
+
+.rec__label {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-4);
+    margin-bottom: 14px;
+}
+
+.rec__title {
+    font-family: var(--f-display);
+    font-weight: 400;
+    font-size: clamp(28px, 3vw, 36px);
+    color: var(--ink-1);
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    margin-bottom: 14px;
+}
+
+.rec__desc {
+    color: var(--ink-3);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    max-width: 56ch;
+}
+
+.rec__desc strong {
+    color: var(--ink-1);
+    font-weight: 500;
+}
+
+.rec__foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.rec__price {
+    font-family: var(--f-display);
+    font-size: 22px;
+    color: var(--ink-1);
+}
+
+.rec__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--ink-1);
+    border-bottom: 1px solid var(--ink-1);
+    padding-bottom: 4px;
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: gap var(--t-med) var(--ease-out);
+}
+
+.rec__link:hover {
+    gap: 14px;
+}
+
+.rec__link i {
+    font-size: 11px;
+}
+
+/* ---- REVIEWS : simpler, no avatars, lighter cards ---------------------- */
+.reviews {
+    background: var(--bg-base);
+}
+
+.reviews__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: var(--max);
+    margin: 0 auto;
+}
+
+@media (max-width: 860px) {
+    .reviews__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.review {
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: var(--r-lg);
+    padding: 36px 32px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.review:hover {
+    transform: none;
+    box-shadow: none;
+    background: var(--surface);
+}
+
+.review__stars { display: none; }
+
+.review__rating { display: none; }
+
+.review blockquote {
+    font-family: var(--f-display);
+    font-size: 20px;
+    line-height: 1.45;
+    color: var(--ink-1);
+    font-weight: 400;
+    letter-spacing: -0.005em;
+    font-style: normal;
+    margin: 0;
+}
+
+.review figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: auto;
+    font-size: 13px;
+}
+
+.review__avatar { display: none; }
+
+.review figcaption strong {
+    color: var(--ink-1);
+    font-weight: 500;
+    font-family: var(--f-body);
+}
+
+.review figcaption small {
+    color: var(--ink-4);
+    font-size: 12px;
+    letter-spacing: 0.04em;
+}
+
+/* ---- NEWSLETTER : strip the orb, calmer card --------------------------- */
+.newsletter__orb { display: none; }
+
+.newsletter__card {
+    box-shadow: 0 40px 80px -50px rgba(31, 24, 19, 0.4);
+}
+
+.newsletter__form .btn:hover {
+    transform: none;
+}
+
+/* ---- FOOTER : tighter ------------------------------------------------- */
+.footer {
+    padding-top: clamp(60px, 8vw, 100px);
+}
+
+/* ---- Reduced motion override stays as-is -------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    .hero__orb { display: none; }
+}
+
