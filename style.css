@@ -4704,3 +4704,319 @@ body.nav-open {
     .hero__orb { display: none; }
 }
 
+/* =========================================================================
+   PRODUCT CARDS — Maison redesign
+   Goal: premium food brand feel (Mariage Frères / Aesop / La Maison du Chocolat)
+   Numbered editions · cultivar metadata · quiet typography · spec grid
+   ========================================================================= */
+
+.showcase {
+    padding-top: clamp(110px, 14vw, 180px);
+    padding-bottom: clamp(110px, 14vw, 180px);
+}
+
+.showcase__grid {
+    gap: clamp(20px, 2.4vw, 32px);
+    align-items: stretch;
+}
+
+/* ---- Card shell ---- */
+.product {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+    transition:
+        border-color var(--t-med) var(--ease-out),
+        box-shadow var(--t-slow) var(--ease-out);
+}
+
+.product:hover {
+    transform: none;
+    border-color: rgba(31, 24, 19, 0.18);
+    box-shadow: 0 32px 60px -32px rgba(31, 24, 19, 0.22);
+}
+
+.product__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* ---- Top label row : edition meta like a wine label ---- */
+.product__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 26px 0;
+    gap: 16px;
+}
+
+.product__index {
+    font-family: var(--f-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0;
+    color: var(--accent-deep);
+    line-height: 1;
+}
+
+.product__edition {
+    font-family: var(--f-body);
+    font-size: 10.5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-4);
+    white-space: nowrap;
+}
+
+/* ---- Media ---- */
+.product__media {
+    position: relative;
+    aspect-ratio: 4 / 5;
+    margin: 22px 26px 4px;
+    background: linear-gradient(170deg, #f1e7d4 0%, #e7dac3 100%);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 36px;
+}
+
+.product__media img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 28px 38px rgba(31, 24, 19, 0.18));
+    transition: transform 900ms var(--ease-out);
+}
+
+.product__link:hover .product__media img {
+    transform: translateY(-4px);
+}
+
+.product__tag { display: none !important; }
+
+/* ---- Body ---- */
+.product__body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 26px 26px;
+}
+
+.product__name {
+    font-family: var(--f-display);
+    font-weight: 400;
+    font-size: clamp(24px, 2.2vw, 30px);
+    letter-spacing: -0.015em;
+    line-height: 1.08;
+    color: var(--ink-1);
+    margin: 0 0 6px;
+}
+
+.product__variety {
+    font-family: var(--f-body);
+    font-size: 10.5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--ink-4);
+    margin: 0 0 18px;
+}
+
+.product__notes {
+    font-family: var(--f-body);
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--ink-3);
+    margin: 0 0 22px;
+}
+
+/* ---- Specs grid : tactile, label/value, hairline divider ---- */
+.product__meta {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px 14px;
+    padding: 18px 0 0;
+    margin: 0 0 22px;
+    border-top: 1px solid var(--line);
+}
+
+.product__meta-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.product__meta-cell dt {
+    font-family: var(--f-body);
+    font-size: 9.5px;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-4);
+}
+
+.product__meta-cell dd {
+    margin: 0;
+    font-family: var(--f-body);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ink-1);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.01em;
+    line-height: 1.25;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ---- Foot : price + quiet link ---- */
+.product__foot {
+    margin-top: auto;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.product__price {
+    font-family: var(--f-display);
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--ink-1);
+    letter-spacing: 0;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.product__arrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--f-body);
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-2);
+    transition: color var(--t-med) var(--ease-out);
+}
+
+.product__arrow i {
+    font-size: 11px;
+    color: var(--accent-deep);
+    transition: transform var(--t-med) var(--ease-out);
+}
+
+.product__link:hover .product__arrow {
+    color: var(--ink-1);
+}
+
+.product__link:hover .product__arrow i {
+    transform: translateX(6px);
+}
+
+/* ---- Feature variant : dark "Cuvée" card ---- */
+.product--feature {
+    background: linear-gradient(170deg, #221a12 0%, #15100a 100%);
+    border-color: transparent;
+}
+
+.product--feature .product__index {
+    color: var(--gold);
+}
+
+.product--feature .product__edition {
+    color: rgba(250, 245, 236, 0.55);
+}
+
+.product--feature .product__media {
+    background:
+        radial-gradient(120% 80% at 50% 0%, rgba(205, 170, 108, 0.18) 0%, transparent 60%),
+        linear-gradient(170deg, #3a2c20 0%, #1f1813 100%);
+}
+
+.product--feature .product__name,
+.product--feature .product__price {
+    color: var(--bg-elevated);
+}
+
+.product--feature .product__variety {
+    color: rgba(250, 245, 236, 0.55);
+}
+
+.product--feature .product__notes {
+    color: rgba(250, 245, 236, 0.72);
+}
+
+.product--feature .product__meta,
+.product--feature .product__foot {
+    border-top-color: rgba(250, 245, 236, 0.14);
+}
+
+.product--feature .product__meta-cell dt {
+    color: rgba(250, 245, 236, 0.5);
+}
+
+.product--feature .product__meta-cell dd {
+    color: var(--bg-elevated);
+}
+
+.product--feature .product__arrow {
+    color: rgba(250, 245, 236, 0.72);
+}
+
+.product--feature .product__arrow i {
+    color: var(--gold);
+}
+
+.product--feature .product__link:hover .product__arrow {
+    color: var(--bg-elevated);
+}
+
+/* ---- Responsive tweaks ---- */
+@media (max-width: 1024px) {
+    .product__media { margin: 18px 22px 4px; padding: 28px; }
+    .product__top   { padding: 20px 22px 0; }
+    .product__body  { padding: 22px 22px 24px; }
+}
+
+@media (max-width: 720px) {
+    .product__media   { aspect-ratio: 1 / 1; padding: 28px; }
+    .product__meta    { gap: 4px 10px; }
+    .product__meta-cell dt { font-size: 9px; letter-spacing: 0.16em; }
+    .product__meta-cell dd { font-size: 12.5px; }
+}
+
+/* ---- Related / inline showcase variants -------------------------------- */
+.showcase--related {
+    padding-top: clamp(80px, 10vw, 120px);
+    padding-bottom: clamp(80px, 10vw, 120px);
+    background: var(--bg-elevated);
+}
+
+.showcase--related .section-head {
+    margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+.showcase__grid--duo {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 920px;
+}
+
+@media (max-width: 720px) {
+    .showcase__grid--duo {
+        grid-template-columns: 1fr;
+        max-width: none;
+    }
+}
+
