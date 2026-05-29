@@ -21,7 +21,17 @@
             price: 14.9,
             image: "images/Produktbild 6.png",
             href: "product-premium.html",
-            keywords: ["weich", "süß", "süss", "karamell", "luxus", "luxuriös", "premium", "geschenk", "medjool"]
+            keywords: ["weich", "süß", "süss", "karamell", "luxus", "luxuriös", "premium", "geschenk", "medjool"],
+            index: "01",
+            edition: "Ernte 2026",
+            variety: "Medjool · Aswan · Grade A",
+            notes: "Butterweich, karamellig — mit einem Hauch dunkler Schokolade im Abgang.",
+            meta: [
+                { label: "Inhalt", value: "250 g" },
+                { label: "Ernte", value: "09 / 2026" },
+                { label: "Sortierung", value: "Grade A" }
+            ],
+            feature: false
         },
         editor: {
             id: "editor",
@@ -30,7 +40,17 @@
             price: 38.0,
             image: "images/Produktbild 4.png",
             href: "product-premium.html",
-            keywords: ["geschenk", "box", "feinschmecker", "tasting", "limitiert", "edel"]
+            keywords: ["geschenk", "box", "feinschmecker", "tasting", "limitiert", "edel"],
+            index: "02",
+            edition: "Limitiert · 1 200 Boxen",
+            variety: "Cuvée · 3 Sorten · Edition 2026",
+            notes: "Die einzige Box, in der unsere drei Sorten nebeneinander stehen. Zum Verschenken — oder um sich selbst kennenzulernen.",
+            meta: [
+                { label: "Inhalt", value: "3 × 180 g" },
+                { label: "Edition", value: "2026" },
+                { label: "Auflage", value: "1 200" }
+            ],
+            feature: true
         },
         bio: {
             id: "bio",
@@ -39,9 +59,80 @@
             price: 12.9,
             image: "images/Produktbild 7.png",
             href: "product-bio.html",
-            keywords: ["bio", "organisch", "natürlich", "natural", "leicht", "knackig", "energy", "sport", "fitness", "training"]
+            keywords: ["bio", "organisch", "natürlich", "natural", "leicht", "knackig", "energy", "sport", "fitness", "training"],
+            index: "03",
+            edition: "Bio · Ernte 2026",
+            variety: "Sukkari · Aswan · EU-Bio",
+            notes: "Knackig, honigsüß, kompakt — aus unserem zertifizierten Bio-Hain Nord.",
+            meta: [
+                { label: "Inhalt", value: "250 g" },
+                { label: "Ernte", value: "09 / 2026" },
+                { label: "Zertifikat", value: "CH-BIO-006" }
+            ],
+            feature: false
         }
     };
+
+    const SHOWCASE_ORDER = ["premium", "editor", "bio"];
+
+    function formatPrice(amount) {
+        return `CHF ${amount.toFixed(2)}`;
+    }
+
+    function renderProductCard(product, delay = 0) {
+        const featureClass = product.feature ? " product--feature" : "";
+        const metaHtml = product.meta.map((cell) => `
+            <div class="product__meta-cell">
+                <dt>${cell.label}</dt>
+                <dd>${cell.value}</dd>
+            </div>
+        `).join("");
+
+        return `
+            <article class="product${featureClass} reveal" data-reveal-delay="${delay}">
+                <a href="${product.href}" class="product__link" aria-label="${product.name} ansehen">
+                    <div class="product__top">
+                        <span class="product__index">№ ${product.index}</span>
+                        <span class="product__edition">${product.edition}</span>
+                    </div>
+                    <div class="product__media">
+                        <img src="${product.image}" alt="${product.name}">
+                    </div>
+                    <div class="product__body">
+                        <h3 class="product__name">${product.name}</h3>
+                        <p class="product__variety">${product.variety}</p>
+                        <p class="product__notes">${product.notes}</p>
+                        <dl class="product__meta">${metaHtml}</dl>
+                        <div class="product__foot">
+                            <span class="product__price">${formatPrice(product.price)}</span>
+                            <span class="product__arrow" aria-hidden="true">
+                                Ansehen
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        `;
+    }
+
+    function mountShowcaseGrids() {
+        document.querySelectorAll("[data-showcase-grid]").forEach((grid) => {
+            const exclude = (grid.dataset.showcaseExclude || "")
+                .split(",")
+                .map((id) => id.trim())
+                .filter(Boolean);
+
+            const items = SHOWCASE_ORDER
+                .filter((id) => !exclude.includes(id))
+                .map((id) => PRODUCTS[id])
+                .filter(Boolean);
+
+            grid.innerHTML = items
+                .map((product, i) => renderProductCard(product, i * 80))
+                .join("");
+        });
+    }
 
     /* -------------------------------------------------------------------------
        Header injection (re-usable across pages)
@@ -586,6 +677,7 @@
        ------------------------------------------------------------------------- */
     document.addEventListener("DOMContentLoaded", () => {
         mountHeader();
+        mountShowcaseGrids();
         initReveal();
         initDateFinder();
         initNewsletter();
