@@ -17,7 +17,7 @@
         premium: {
             id: "premium",
             name: "Premium Medjool",
-            tagline: "Karamellig · weich · luxuriös",
+            tagline: "Karamellig · weich · aus dem ältesten Hain",
             price: 14.9,
             image: "images/Produktbild 6.png",
             href: "product-premium.html",
@@ -35,7 +35,7 @@
         bio: {
             id: "bio",
             name: "Bio Sukkari",
-            tagline: "Knackig · natürlich · zertifiziert bio",
+            tagline: "Knackig · honigsüß · EU-Bio",
             price: 12.9,
             image: "images/Produktbild 7.png",
             href: "product-bio.html",
@@ -333,14 +333,14 @@
         const q = query.toLowerCase();
 
         if (product.id === "premium") {
-            return `Die <strong>${product.name}</strong>. Weich, karamellig im Kern, mit einem Hauch dunkler Schokolade im Abgang — eine Dattel für besondere Momente.`;
+            return `Die <strong>${product.name}</strong>. Weich, karamellig, mit einem Hauch dunkler Schokolade im Abgang — aus den ältesten Palmen unseres Hains.`;
         }
         if (product.id === "bio") {
-            return `Die <strong>${product.name}</strong>. Knackiger Biss, klare Honig-Note, zertifizierte Bio-Qualität — ein ehrlicher Begleiter im Alltag.`;
+            return `Die <strong>${product.name}</strong>. Knackiger Biss, klare Honignote, EU-Bio aus unserem Hain Nord — für den ehrlichen Alltag.`;
         }
         if (product.id === "editor") {
             const isGift = q.includes("geschenk") || q.includes("gift");
-            return `Die <strong>${product.name}</strong>. Drei Sorten, eine Geschenkbox — kuratiert für ${isGift ? "ein unvergessliches Präsent" : "neugierige Feinschmecker"}.`;
+            return `Die <strong>${product.name}</strong>. Drei Sorten, ein Hain — ${isGift ? "zum Verschenken, mit Geschichte" : "um Bena kennenzulernen"}.`;
         }
         return `Die <strong>${product.name}</strong>. ${product.tagline}.`;
     }
