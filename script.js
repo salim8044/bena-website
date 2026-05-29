@@ -14,6 +14,25 @@
        Product catalogue (single source of truth for recommendations / cart)
        ------------------------------------------------------------------------- */
     const PRODUCTS = {
+        editor: {
+            id: "editor",
+            name: "Signature Collection",
+            tagline: "Numerierte Edition · drei Sorten",
+            price: 38.0,
+            image: "images/Produktbild 4.png",
+            href: "product-premium.html",
+            keywords: ["geschenk", "box", "feinschmecker", "tasting", "limitiert", "edel", "signature"],
+            index: "01",
+            edition: "Numerierte Edition · 1 200 Exemplare",
+            variety: "Cuvée · 3 Sorten · Ernte 2026",
+            notes: "Unsere drei Sorten in einer Box — Medjool, Sukkari, Khalas. Numeriert, einmal im Jahr aufgelegt, ohne Restbestand.",
+            meta: [
+                { label: "Inhalt", value: "3 × 180 g" },
+                { label: "Ernte", value: "09 / 2026" },
+                { label: "Auflage", value: "1 von 1 200" }
+            ],
+            feature: true
+        },
         premium: {
             id: "premium",
             name: "Premium Medjool",
@@ -22,8 +41,8 @@
             image: "images/Produktbild 6.png",
             href: "product-premium.html",
             keywords: ["weich", "süß", "süss", "karamell", "luxus", "luxuriös", "premium", "geschenk", "medjool"],
-            index: "01",
-            edition: "Ernte 2026",
+            index: "02",
+            edition: "Ernte 2026 · Grade A",
             variety: "Medjool · Aswan · Grade A",
             notes: "Butterweich, karamellig — mit einem Hauch dunkler Schokolade im Abgang.",
             meta: [
@@ -32,25 +51,6 @@
                 { label: "Sortierung", value: "Grade A" }
             ],
             feature: false
-        },
-        editor: {
-            id: "editor",
-            name: "Editor's Box",
-            tagline: "Drei Sorten · limitierte Edition",
-            price: 38.0,
-            image: "images/Produktbild 4.png",
-            href: "product-premium.html",
-            keywords: ["geschenk", "box", "feinschmecker", "tasting", "limitiert", "edel"],
-            index: "02",
-            edition: "Limitiert · 1 200 Boxen",
-            variety: "Cuvée · 3 Sorten · Edition 2026",
-            notes: "Die einzige Box, in der unsere drei Sorten nebeneinander stehen. Zum Verschenken — oder um sich selbst kennenzulernen.",
-            meta: [
-                { label: "Inhalt", value: "3 × 180 g" },
-                { label: "Edition", value: "2026" },
-                { label: "Auflage", value: "1 200" }
-            ],
-            feature: true
         },
         bio: {
             id: "bio",
@@ -73,7 +73,7 @@
         }
     };
 
-    const SHOWCASE_ORDER = ["premium", "editor", "bio"];
+    const SHOWCASE_ORDER = ["editor", "premium", "bio"];
 
     function formatPrice(amount) {
         return `CHF ${amount.toFixed(2)}`;
@@ -431,7 +431,7 @@
         }
         if (product.id === "editor") {
             const isGift = q.includes("geschenk") || q.includes("gift");
-            return `Die <strong>${product.name}</strong>. Drei Sorten, ein Hain — ${isGift ? "zum Verschenken, mit Geschichte" : "um Bena kennenzulernen"}.`;
+            return `Die <strong>${product.name}</strong>. Drei Sorten, ein Hain, numerierte Edition — ${isGift ? "ein Geschenk mit Geschichte" : "um Bena kennenzulernen"}.`;
         }
         return `Die <strong>${product.name}</strong>. ${product.tagline}.`;
     }
@@ -469,7 +469,7 @@
                 const success = document.createElement("p");
                 success.className = "newsletter__success";
                 success.innerHTML =
-                    '<i class="fa-solid fa-circle-check"></i> Willkommen bei Bena. Dein 5%-Code ist unterwegs.';
+                    '<i class="fa-solid fa-circle-check"></i> Du stehst auf der Reserveliste. Wir melden uns vor der Ernte.';
                 form.appendChild(success);
             }
 
